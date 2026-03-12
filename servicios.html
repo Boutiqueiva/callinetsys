@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Callinetsys México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
+                <span class="logo-text">CALLINETSYS</span>
+            </a>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="servicios.html" class="active">SERVICIOS</a></li>
+            <li><a href="partners.html">PARTNERS</a></li>
+            <li class="mobile-only"><a href="contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="contacto.html" class="btn-nav">Contáctanos</a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </nav>
+
+    <section class="servicios-hero">
+        <h1>NUESTROS SERVICIOS</h1>
+        <p>Soluciones tecnológicas integrales para transformar y potenciar tu negocio en la era digital.</p>
+    </section>
+
+    <section class="servicios-slider">
+        <div class="container">
+            <h2 class="section-header">Servicios Principales</h2>
+
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="moveSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="slider-wrapper" id="slider">
+                    <div class="slide active">
+                        <div class="slide-layout service-layout">
+                            <div class="service-main">
+                                <span class="service-badge"><i class="fas fa-star"></i> Servicio principal</span>
+                                <h3>BIG DATA Y ANALYTICS</h3>
+                                <p>Convertimos datos en decisiones estratégicas con analítica avanzada, machine learning y tableros ejecutivos. Tu negocio gana visibilidad, predicción y velocidad para responder al mercado.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i><span>Modelos predictivos y dashboards ejecutivos.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Automatización de reportes críticos.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Decisiones con datos en tiempo real.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="service-aside">
+                                <div class="service-aside-media"><img src="src/big.png" alt="Big Data y Analytics"></div>
+                                <div class="service-aside-body">
+                                    <h4>Resultado esperado</h4>
+                                    <p>Más control de negocio, menos incertidumbre operativa.</p>
+                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-layout service-layout">
+                            <div class="service-main">
+                                <span class="service-badge"><i class="fas fa-cloud"></i> Servicio principal</span>
+                                <h3>INFRAESTRUCTURA EN LA NUBE</h3>
+                                <p>Diseñamos, migramos y administramos infraestructura cloud con alta disponibilidad, seguridad y escalabilidad. Optimizamos costos en Azure y plataformas líderes para que tu operación crezca sin fricciones.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i><span>Migración segura y controlada a la nube.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Arquitecturas escalables por demanda.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Optimización de costos y rendimiento.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="service-aside">
+                                <div class="service-aside-media"><img src="src/nube2.jpg" alt="Infraestructura en la nube"></div>
+                                <div class="service-aside-body">
+                                    <h4>Resultado esperado</h4>
+                                    <p>Operación más flexible con continuidad y seguridad.</p>
+                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-layout service-layout">
+                            <div class="service-main">
+                                <span class="service-badge"><i class="fas fa-shield-alt"></i> Servicio principal</span>
+                                <h3>SEGURIDAD INFORMÁTICA</h3>
+                                <p>Protegemos sistemas, redes y datos con una estrategia integral: evaluación de vulnerabilidades, hardening, protección de endpoints y respuesta a incidentes para reducir riesgos reales.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i><span>Evaluación de vulnerabilidades y hardening.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Protección de endpoints y perímetro.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Respuesta rápida ante incidentes.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="service-aside">
+                                <div class="service-aside-media"><img src="src/seg.webp" alt="Seguridad informática empresarial"></div>
+                                <div class="service-aside-body">
+                                    <h4>Resultado esperado</h4>
+                                    <p>Menor exposición a amenazas y mayor confianza operativa.</p>
+                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-layout service-layout">
+                            <div class="service-main">
+                                <span class="service-badge"><i class="fas fa-robot"></i> Servicio principal</span>
+                                <h3>INTELIGENCIA ARTIFICIAL</h3>
+                                <p>Implementamos IA aplicada para automatizar procesos, mejorar la toma de decisiones y acelerar resultados con soluciones prácticas alineadas a tus objetivos de negocio.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i><span>Automatización de tareas repetitivas.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Modelos de apoyo a decisiones estratégicas.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Mayor productividad de tus equipos.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="service-aside">
+                                <div class="service-aside-media"><img src="src/gemi.jpg" alt="Soluciones de inteligencia artificial"></div>
+                                <div class="service-aside-body">
+                                    <h4>Resultado esperado</h4>
+                                    <p>Procesos más ágiles y decisiones con mejor precisión.</p>
+                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-layout service-layout">
+                            <div class="service-main">
+                                <span class="service-badge"><i class="fas fa-sync-alt"></i> Servicio principal</span>
+                                <h3>TRANSFORMACIÓN DIGITAL</h3>
+                                <p>Acompañamos la digitalización de punta a punta: procesos, herramientas colaborativas y arquitectura tecnológica para mejorar productividad, control y experiencia de cliente.</p>
+                                <ul class="service-list">
+                                    <li><i class="fas fa-check-circle"></i><span>Optimización de procesos clave.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Implementación tecnológica por fases.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Ejecución alineada a objetivos del negocio.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="service-aside">
+                                <div class="service-aside-media"><img src="src/before-after.jpg" alt="Transformación digital empresarial"></div>
+                                <div class="service-aside-body">
+                                    <h4>Resultado esperado</h4>
+                                    <p>Una operación moderna, conectada y orientada a crecimiento.</p>
+                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-btn next" onclick="moveSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="slider-dots" id="dots"></div>
+        </div>
+    </section>
+
+    <section class="servicios-grid">
+        <h2 class="grid-title">Más Servicios</h2>
+        <div class="services-cards">
+            <div class="service-card">
+                <i class="fas fa-server"></i>
+                <h4>Virtualización</h4>
+                <p>Soluciones de virtualización con VMware y Hyper-V para optimizar recursos y reducir costos de infraestructura.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-database"></i>
+                <h4>Bases de Datos</h4>
+                <p>Administración, optimización y migración de bases de datos SQL Server, Oracle, MySQL y PostgreSQL.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-network-wired"></i>
+                <h4>Redes y Conectividad</h4>
+                <p>Diseño e implementación de redes empresariales, Wi-Fi corporativo y soluciones de conectividad segura.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>Desarrollo Móvil</h4>
+                <p>Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-headset"></i>
+                <h4>Soporte Técnico</h4>
+                <p>Soporte especializado 24/7, mesa de ayuda y administración de servicios TI (ITSM).</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Consultoría TI</h4>
+                <p>Asesoría estratégica en tecnología, auditorías IT y planes de continuidad de negocio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="campus-highlight">
+        <div class="campus-highlight-card">
+            <div class="campus-main">
+                <span class="campus-badge"><i class="fas fa-school"></i> Campus Inteligente Administrado</span>
+                <h2>Moderniza tu colegio sin reemplazar toda tu infraestructura</h2>
+                <p class="lead">Paquete diseñado para colegios privados que necesitan tecnología actual, operación estable y costos controlados. Pago mensual accesible, soporte continuo y resultados visibles desde la primera etapa.</p>
+                <ul class="campus-features">
+                    <li><i class="fas fa-check-circle"></i><span>Migración de equipos a sistema moderno (fin del soporte de Windows 10).</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Administración de red para operación estable y monitoreada.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Wi-Fi de última generación (Wi-Fi 6/7 según proyecto).</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Video vigilancia inteligente para protección y control.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Control de acceso para áreas clave del plantel.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Soporte continuo con atención especializada.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Capacitación incluida para tu equipo operativo y académico.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Modernizamos laboratorios de cómputo sin reemplazar todo.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Tecnología funcionando sin complicaciones, con mensualidad accesible.</span></li>
+                </ul>
+            </div>
+            <aside class="campus-aside">
+                <h3>Listo para vender y ejecutar</h3>
+                <p>Paquete completo para que tu equipo de marketing y programadores lo implemente como oferta principal.</p>
+                <ul class="campus-points">
+                    <li><i class="fas fa-circle"></i><span>Sin inversión inicial elevada</span></li>
+                    <li><i class="fas fa-circle"></i><span>Continuidad académica garantizada</span></li>
+                    <li><i class="fas fa-circle"></i><span>Escalable por fases</span></li>
+                </ul>
+                <a href="contacto.html" class="btn-primary campus-cta">Quiero un diagnóstico para mi colegio</a>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Chat flotante -->
+    <div class="custom-chat-trigger" id="chat-trigger">
+        <div class="chat-icon-wrapper">
+            <i class="fas fa-comment-dots"></i>
+            <span class="chat-pulse"></span>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="src/logo.png" alt="CNS">
+                <p>Soluciones tecnológicas integrales para empresas en crecimiento.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="partners.html">Partners</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <a href="tel:+525512345678"><i class="fas fa-phone"></i> +52 (55) 1234 5678</a>
+                <a href="mailto:contacto@callinetsys.com"><i class="fas fa-envelope"></i> contacto@callinetsys.com</a>
+                <a href="https://maps.app.goo.gl/GurRgNm7VndYgKfi8" target="_blank"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Callinetsys México. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        /* ── Slider ── */
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+
+        function createDots() {
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function showSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            slides.forEach(s => s.classList.remove('active'));
+            slides[index].classList.add('active');
+            currentSlide = index;
+            updateDots();
+        }
+
+        function moveSlide(dir) { showSlide(currentSlide + dir); }
+        function goToSlide(i) { showSlide(i); }
+
+        /* ── Smart Navbar (ocultar al bajar, mostrar al subir) ── */
+        (function () {
+            const navbar = document.getElementById('navbar');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function updateNavbar() {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY <= 10) {
+                    // Siempre visible en la cima
+                    navbar.classList.remove('navbar-hidden');
+                } else if (currentScrollY > lastScrollY) {
+                    // Bajando → ocultar
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    // Subiendo → mostrar
+                    navbar.classList.remove('navbar-hidden');
+                }
+
+                lastScrollY = currentScrollY;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateNavbar);
+                    ticking = true;
+                }
+            }, { passive: true });
+        })();
+
+        /* ── Hamburger menu ── */
+        (function () {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks  = document.getElementById('nav-links');
+            const overlay   = document.getElementById('nav-overlay');
+
+            function toggleMenu(open) {
+                hamburger.classList.toggle('active', open);
+                navLinks.classList.toggle('active', open);
+                overlay.classList.toggle('active', open);
+                document.body.style.overflow = open ? 'hidden' : '';
+            }
+
+            hamburger.addEventListener('click', () => {
+                const isOpen = navLinks.classList.contains('active');
+                toggleMenu(!isOpen);
+            });
+
+            overlay.addEventListener('click', () => toggleMenu(false));
+
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => toggleMenu(false));
+            });
+        })();
+
+        /* ── Chat trigger visibility ── */
+        (function () {
+            const chatTrigger = document.getElementById('chat-trigger');
+            function toggleChat() {
+                chatTrigger.classList.toggle('visible', window.scrollY > 180);
+            }
+            toggleChat();
+            window.addEventListener('scroll', toggleChat, { passive: true });
+        })();
+
+        document.addEventListener('DOMContentLoaded', createDots);
+    </script>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

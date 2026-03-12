@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Callinetsys México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="nosotros.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
+                <span class="logo-text">CALLINETSYS</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="nosotros.html" class="active">NOSOTROS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="partners.html">PARTNERS</a></li>
+            <li class="mobile-only"><a href="contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="contacto.html" class="btn-nav">Contáctanos</a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="nosotros-hero">
+        <h1>NOSOTROS</h1>
+        <p>Más de 20 años transformando empresas a través de la tecnología</p>
+    </section>
+
+    <!-- Quiénes somos / Misión -->
+    <section class="nosotros-cards-section">
+        <div class="nosotros-grid">
+            <div class="nosotros-card">
+                <h2>¿Quiénes somos?</h2>
+                <p><strong>CALLINETSYS</strong> es una empresa mexicana que nace en el año 2000 bajo la dirección del <strong>Ingeniero Fernando Ramírez</strong>.</p>
+                <p>Nuestras oficinas se ubican estratégicamente en la <strong>Colonia Narvarte</strong> (CDMX) y en <strong>Ciudad Nezahualcóyotl</strong> (EdoMéx).</p>
+                <p>Estamos dedicados a integrar e implementar soluciones avanzadas siendo socios de negocios de los líderes del mercado.</p>
+            </div>
+
+            <div class="nosotros-card">
+                <h2>Nuestra Misión</h2>
+                <p>Integrar la transformación digital a los objetivos de negocio de nuestros clientes mejorando la colaboración y la calidad de vida de sus integrantes.</p>
+                <h2 style="margin-top: 30px">Nuestra Visión</h2>
+                <p>Ser la mejor compañía nacional de transformación digital permitiendo a nuestros clientes decidir hasta dónde quieren llegar con la gestión tecnológica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialización -->
+    <section class="especializacion-container">
+        <h2 class="especializacion-title">ÁREAS DE ESPECIALIZACIÓN</h2>
+
+        <div class="especializacion-wrapper">
+            <aside>
+                <ul class="especializacion-menu">
+                    <li class="active" data-index="0">Infraestructura</li>
+                    <li data-index="1">Microsoft Azure & Office 365</li>
+                    <li data-index="2">Virtualización</li>
+                    <li data-index="3">Voz y Cámaras IP</li>
+                    <li data-index="4">Internet y Fibra Óptica</li>
+                    <li data-index="5">Licenciamiento</li>
+                    <li data-index="6">Seguridad</li>
+                    <li data-index="7">Venta de Hardware</li>
+                </ul>
+            </aside>
+
+            <section id="especializacion-content">
+                <div class="especializacion-content-inner">
+                    <div class="especializacion-image">
+                        <img id="especializacion-img" src="src/infraestructura.webp" alt="Infraestructura tecnológica">
+                    </div>
+                    <div class="especializacion-text" id="especializacion-text">
+                        <h3>Infraestructura</h3>
+                        <p>Diseño e implementación de infraestructura tecnológica certificada garantizando estabilidad, rendimiento y escalabilidad.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Chat flotante -->
+    <div class="custom-chat-trigger" id="chat-trigger">
+        <div class="chat-icon-wrapper">
+            <i class="fas fa-comment-dots"></i>
+            <span class="chat-pulse"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="src/logo.png" alt="CNS">
+                <p>Soluciones tecnológicas integrales para empresas en crecimiento.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="partners.html">Partners</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <a href="tel:+525512345678"><i class="fas fa-phone"></i> +52 (55) 1234 5678</a>
+                <a href="mailto:contacto@callinetsys.com"><i class="fas fa-envelope"></i> contacto@callinetsys.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Callinetsys México. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+
+    <script>
+        /* ── Especialización interactiva ── */
+        const areas = [
+            {
+                titulo: "Infraestructura",
+                img: "src/infraestructura.webp",
+                alt: "Infraestructura tecnológica",
+                texto: "Diseño e implementación de infraestructura tecnológica certificada garantizando estabilidad, rendimiento y escalabilidad."
+            },
+            {
+                titulo: "Microsoft Azure & Office 365",
+                img: "src/azure.webp",
+                alt: "Microsoft Azure",
+                texto: "Somos partners oficiales de Microsoft. Implementamos y administramos soluciones en la nube con Azure y Office 365 para maximizar la productividad de tu empresa."
+            },
+            {
+                titulo: "Virtualización",
+                img: "src/virtualizacion.webp",
+                alt: "Virtualización",
+                texto: "Optimizamos recursos de TI mediante soluciones de virtualización de servidores, escritorios y almacenamiento con tecnologías líderes del mercado."
+            },
+            {
+                titulo: "Voz y Cámaras IP",
+                img: "src/vozip.webp",
+                alt: "Voz IP y videovigilancia",
+                texto: "Integramos sistemas de telefonía IP, videoconferencia y videovigilancia inteligente para mejorar la comunicación y seguridad de tu organización."
+            },
+            {
+                titulo: "Internet y Fibra Óptica",
+                img: "src/fibra.webp",
+                alt: "Fibra óptica",
+                texto: "Desplegamos infraestructura de fibra óptica profesional e Internet empresarial con monitoreo continuo y soporte dedicado para máxima disponibilidad."
+            },
+            {
+                titulo: "Licenciamiento",
+                img: "src/licencias.webp",
+                alt: "Licenciamiento de software",
+                texto: "Asesoramos y gestionamos el licenciamiento de software empresarial optimizando costos y garantizando el cumplimiento normativo."
+            },
+            {
+                titulo: "Seguridad",
+                img: "src/seguridad.webp",
+                alt: "Seguridad informática",
+                texto: "Protegemos tu infraestructura con soluciones de ciberseguridad, firewalls, antivirus corporativo, control de accesos y videovigilancia inteligente."
+            },
+            {
+                titulo: "Venta de Hardware",
+                img: "src/hardware.webp",
+                alt: "Hardware empresarial",
+                texto: "Comercializamos equipos de cómputo, servidores, switches, routers y accesorios de las marcas líderes con respaldo técnico especializado."
+            }
+        ];
+
+        document.querySelectorAll('.especializacion-menu li').forEach(li => {
+            li.addEventListener('click', () => {
+                document.querySelectorAll('.especializacion-menu li').forEach(i => i.classList.remove('active'));
+                li.classList.add('active');
+
+                const idx = parseInt(li.dataset.index);
+                const area = areas[idx];
+
+                const img = document.getElementById('especializacion-img');
+                const text = document.getElementById('especializacion-text');
+
+                img.style.opacity = '0';
+                text.style.opacity = '0';
+
+                setTimeout(() => {
+                    img.src = area.img;
+                    img.alt = area.alt;
+                    text.innerHTML = `<h3>${area.titulo}</h3><p>${area.texto}</p>`;
+                    img.style.transition = 'opacity 0.35s ease';
+                    text.style.transition = 'opacity 0.35s ease';
+                    img.style.opacity = '1';
+                    text.style.opacity = '1';
+                }, 200);
+            });
+        });
+    </script>
+
+</body>
+</html>

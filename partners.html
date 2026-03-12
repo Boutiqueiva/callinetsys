@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners | Callinetsys México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .partners-hero {
+            padding: 100px 7%;
+            background: linear-gradient(135deg, var(--black) 0%, #1a2634 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .partners-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .partners-hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--green);
+            margin-bottom: 20px;
+        }
+
+        .partners-hero p {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+
+        .partners-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--green);
+        }
+
+        .stat-label {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .alianzas-section {
+            padding: 100px 7%;
+        }
+
+        .alianzas-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .alianzas-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .alianzas-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .alianza-card {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.4s;
+        }
+
+        .alianza-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--blue);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .alianza-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+
+        .partners-grid-section {
+            padding: 100px 7%;
+            background: var(--gray-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .partner-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.4s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--blue);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .partner-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(33, 114, 184, 0.1);
+            color: var(--blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+
+        .partner-card h3 {
+            margin-bottom: 15px;
+            color: var(--blue);
+        }
+
+        .cta-section {
+            padding: 100px 7%;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-content p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--blue);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
+                <span class="logo-text">CALLINETSYS</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="partners.html" class="active">PARTNERS</a></li>
+            <li class="mobile-only"><a href="contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="contacto.html" class="btn-nav">Contáctanos</a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </nav>
+
+    <section class="partners-hero">
+        <div class="partners-hero-content">
+            <h1>PARTNERS</h1>
+            <div class="partners-hero-subtitle">Alianzas Estratégicas</div>
+            <p>
+                Se ha cultivado un ecosistema de alianzas estratégicas exclusivamente con empresas líderes 
+                en las tecnologías que ofrecen. Para ofrecer solamente servicios de punta, basados en estas alianzas.
+            </p>
+            
+            <div class="partners-stats">
+                <div class="stat-item">
+                    <div class="stat-number">+20</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Proyectos Exitosos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alianzas-section">
+        <div class="alianzas-intro">
+            <h2>Nuestro Ecosistema de Alianzas</h2>
+            <p>
+                Trabajamos con los mejores para ofrecer lo mejor. Nuestras alianzas estratégicas 
+                nos permiten acceder a tecnología de vanguardia, certificaciones exclusivas y 
+                soluciones innovadoras que benefician directamente a nuestros clientes.
+            </p>
+        </div>
+
+        <div class="alianzas-cards">
+            <div class="alianza-card">
+                <div class="alianza-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Colaboración Estratégica</h3>
+                <p>
+                    Establecemos relaciones de largo plazo basadas en confianza mutua, 
+                    objetivos compartidos y crecimiento conjunto con cada uno de nuestros partners.
+                </p>
+            </div>
+
+            <div class="alianza-card">
+                <div class="alianza-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Tecnología de Punta</h3>
+                <p>
+                    Acceso exclusivo a las últimas innovaciones tecnológicas, certificaciones 
+                    y recursos técnicos de los líderes mundiales en cada especialidad.
+                </p>
+            </div>
+
+            <div class="alianza-card">
+                <div class="alianza-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Beneficio Compartido</h3>
+                <p>
+                    Nuestras alianzas están diseñadas para crear valor para todas las partes: 
+                    nuestros partners, nuestros clientes y nuestra empresa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-grid-section">
+        <div class="section-header">
+            <h2>Nuestros Socios Comerciales</h2>
+            <p>Trabajamos con pasión y compromiso junto a organizaciones líderes en sus sectores</p>
+        </div>
+
+        <div class="partners-grid">
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <h3>ISSSTE</h3>
+                <p>
+                    Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado. 
+                    Colaboramos en proyectos tecnológicos para el sector salud público.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>EDITORIAL TRILLAS</h3>
+                <p>
+                    Líder en la industria editorial mexicana. Implementamos soluciones digitales 
+                    para optimizar sus procesos editoriales y distribución.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3>HERMES MUSIC</h3>
+                <p>
+                    Empresa líder en distribución musical y entretenimiento. Desarrollamos 
+                    plataformas digitales para la gestión de su catálogo y derechos digitales.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>PLAPERS</h3>
+                <p>
+                    Especialistas en soluciones industriales. Implementamos sistemas de 
+                    automatización y control para optimizar sus procesos de producción.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>YUMSA</h3>
+                <p>
+                    Empresa del sector alimenticio. Desarrollamos sistemas de gestión 
+                    integral para control de inventarios, producción y distribución.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fab fa-microsoft"></i>
+                </div>
+                <h3>MICROSOFT</h3>
+                <p>
+                    Partner certificado Microsoft. Implementamos soluciones Azure, 
+                    Office 365 y Dynamics 365 para transformación digital empresarial.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>CISCO</h3>
+                <p>
+                    Partner autorizado Cisco. Especialistas en redes, seguridad y 
+                    colaboración con tecnología de clase mundial.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>DELL TECHNOLOGIES</h3>
+                <p>
+                    Proveedor autorizado de infraestructura. Soluciones de hardware, 
+                    almacenamiento y centros de datos de última generación.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Rijie Network</h3>
+                <p>
+                    Especialistas en soluciones de redes y switches de alto rendimiento.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h3>Huawei</h3>
+                <p>
+                    Proveedor global de infraestructura de telecomunicaciones y redes.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Hikivision</h3>
+                <p>
+                    Líder en videovigilancia y soluciones IoT para seguridad física.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Listo para ser nuestro próximo partner exitoso?</h2>
+            <p>
+                Únete a nuestro ecosistema de alianzas estratégicas y descubre cómo podemos 
+                crecer juntos, aprovechando la tecnología más avanzada y nuestra experiencia 
+                para lograr resultados extraordinarios.
+            </p>
+            <a href="contacto.html" class="cta-button">
+                Contáctanos
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Chat flotante -->
+    <div class="custom-chat-trigger visible" id="chat-trigger">
+        <div class="chat-icon-wrapper">
+            <i class="fas fa-comment-dots"></i>
+            <span class="chat-pulse"></span>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="src/logo.png" alt="CNS">
+                <p>Soluciones tecnológicas integrales para empresas en crecimiento.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="partners.html">Partners</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <a href="tel:+525512345678"><i class="fas fa-phone"></i> +52 (55) 1234 5678</a>
+                <a href="mailto:contacto@callinetsys.com"><i class="fas fa-envelope"></i> contacto@callinetsys.com</a>
+                <a href="https://maps.app.goo.gl/GurRgNm7VndYgKfi8" target="_blank"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Callinetsys México. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.partner-card, .alianza-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
