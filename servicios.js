@@ -26,11 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Ir a un slide específico
     function goToSlide(index) {
-        // Validar índice
         if (index < 0) index = totalSlides - 1;
         if (index >= totalSlides) index = 0;
         
-        // Remover clases activas
         slides.forEach(slide => {
             slide.classList.remove('active', 'prev');
         });
@@ -38,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const dots = document.querySelectorAll('.dot');
         dots.forEach(dot => dot.classList.remove('active'));
         
-        // Actualizar slide actual
         slides[index].classList.add('active');
         dots[index].classList.add('active');
         currentSlide = index;
@@ -67,8 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Inicializar
     createDots();
-    
-    // Asegurar que el primer slide esté activo
     slides[0].classList.add('active');
     
     // Navegación por teclado
