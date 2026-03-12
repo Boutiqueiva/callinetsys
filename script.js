@@ -92,42 +92,42 @@ document.addEventListener("DOMContentLoaded", function() {
        ========================================= */
     const datosSocios = {
         'msft': {
-            img: 'mtsf.png',
+            img: 'src/mtsf.png',
             nombre: 'Microsoft',
             descripcion: 'Partner certificado Microsoft. Implementamos soluciones Azure, Office 365, Teams y Dynamics 365 para impulsar la productividad y transformación digital de tu empresa con tecnología en la nube.'
         },
         'cisco': {
-            img: 'cisco.png',
+            img: 'src/cisco.png',
             nombre: 'Cisco',
             descripcion: 'Partner autorizado Cisco. Especialistas en diseño e implementación de redes empresariales, ciberseguridad, colaboración y conectividad de clase mundial para entornos críticos.'
         },
         'oracle': {
-            img: 'oracle.png',
+            img: 'src/oracle.png',
             nombre: 'Oracle',
             descripcion: 'Alianza con Oracle para la implementación y administración de bases de datos, ERP empresarial y soluciones en la nube que optimizan procesos y garantizan alta disponibilidad de datos.'
         },
         'sap': {
-            img: 'sap.png',
+            img: 'src/sap.png',
             nombre: 'SAP',
             descripcion: 'Partner SAP especializado en la implementación de soluciones ERP, gestión financiera y cadena de suministro que integran y digitalizan todos los procesos clave del negocio.'
         },
         'open': {
-            img: 'open.png',
+            img: 'src/open.png',
             nombre: 'Open Source',
             descripcion: 'Implementamos soluciones basadas en tecnologías open source como Linux, Kubernetes, OpenStack y herramientas de desarrollo que reducen costos de licenciamiento sin sacrificar rendimiento.'
         },
         'ruijie': {
-            img: 'ruijid.webp',
+            img: 'src/ruijid.webp',
             nombre: 'Ruijie Network',
             descripcion: 'Distribuidor oficial Ruijie. Proveemos switches, routers y puntos de acceso Wi-Fi de alto rendimiento para redes empresariales y educativas con gestión centralizada en la nube.'
         },
         'huawei': {
-            img: 'huwa.png',
+            img: 'src/huwa.png',
             nombre: 'Huawei',
             descripcion: 'Partner Huawei para infraestructura de telecomunicaciones, redes 5G, soluciones de almacenamiento y equipos de red empresarial con tecnología de vanguardia a nivel mundial.'
         },
         'hikvision': {
-            img: 'hiki.webp',
+            img: 'src/hiki.webp',
             nombre: 'Hikvision',
             descripcion: 'Distribuidor autorizado Hikvision, líder mundial en videovigilancia. Implementamos sistemas de cámaras IP, analítica de video inteligente y control de accesos para proteger tu empresa.'
         }
