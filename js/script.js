@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
     /* =========================================
         2. MENÚ HAMBURGUESA (Móvil)
        ========================================= */
-    const menuToggle = document.getElementById('hamburger');
-    const navMenu = document.querySelector('.nav-links');
-    const navOverlay = document.getElementById('nav-overlay');
+    const menuToggle  = document.getElementById('hamburger');
+    const navMenu     = document.querySelector('.nav-links');
+    const navOverlay  = document.getElementById('nav-overlay');
     const navLinksItems = document.querySelectorAll('.nav-links a');
 
     function toggleMenu() {
@@ -66,29 +66,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navLinksItems.forEach(link => {
         link.addEventListener('click', () => {
-            if (navMenu && navMenu.classList.contains('active')) {
-                toggleMenu();
-            }
+            if (navMenu && navMenu.classList.contains('active')) toggleMenu();
         });
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
-            toggleMenu();
-        }
+        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) toggleMenu();
     });
 
     navMenu?.addEventListener('click', (e) => { e.stopPropagation(); });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('active')) {
-            toggleMenu();
-        }
+        if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('active')) toggleMenu();
     });
 
 
     /* =========================================
-        3. LÓGICA DE SOCIOS (PARTNERS)
+        3. LÓGICA DE SOCIOS (PARTNERS) — Apple incluido
        ========================================= */
     const datosSocios = {
         'msft': {
@@ -130,56 +124,82 @@ document.addEventListener("DOMContentLoaded", function() {
             img: 'src/hiki.webp',
             nombre: 'Hikvision',
             descripcion: 'Distribuidor autorizado Hikvision, líder mundial en videovigilancia. Implementamos sistemas de cámaras IP, analítica de video inteligente y control de accesos para proteger tu empresa.'
+        },
+        'apple': {
+            img: 'src/apple.webp',
+            nombre: 'Apple — Distribuidor Oficial',
+            descripcion: 'Somos distribuidores oficiales Apple en México. Equipamos empresas e instituciones con Mac, iPad, iPhone y Apple Business Manager con soporte experto y garantía oficial.'
         }
     };
 
     window.cambiarLogo = function(clave) {
-        const img        = document.getElementById('display-logo') || document.getElementById('partner-img');
-        const nombreEl   = document.getElementById('partner-nombre');
-        const descripEl  = document.getElementById('partner-descripcion');
-        const tagsSocio  = document.querySelectorAll('.partners-tags span');
+        const img       = document.getElementById('display-logo') || document.getElementById('partner-img');
+        const nombreEl  = document.getElementById('partner-nombre');
+        const descripEl = document.getElementById('partner-descripcion');
 
         const socio = datosSocios[clave] || datosSocios['msft'];
 
-        // Resaltar el tag activo
-        tagsSocio.forEach(span => {
+        /* Resaltar tag activo — spans normales */
+        document.querySelectorAll('.partners-tags span').forEach(span => {
             span.classList.remove('partner-active');
             if (span.getAttribute('onclick') && span.getAttribute('onclick').includes(`'${clave}'`)) {
                 span.classList.add('partner-active');
             }
         });
 
-        // Fade out
-        if (img)       img.style.opacity      = '0';
+        /* Quitar activo del wrapper Apple si lo tenía */
+        const appleWrapper = document.getElementById('tag-apple');
+        if (appleWrapper) appleWrapper.classList.remove('partner-active');
+
+        /* Fade out → cambiar → fade in */
+        if (img)       img.style.opacity       = '0';
         if (nombreEl)  nombreEl.style.opacity  = '0';
         if (descripEl) descripEl.style.opacity = '0';
 
         setTimeout(() => {
-            if (img) {
-                img.src          = socio.img;
-                img.alt          = socio.nombre;
-                img.style.opacity = '1';
-            }
-            if (nombreEl) {
-                nombreEl.textContent  = socio.nombre;
-                nombreEl.style.opacity = '1';
-            }
-            if (descripEl) {
-                descripEl.textContent  = socio.descripcion;
-                descripEl.style.opacity = '1';
-            }
+            if (img)       { img.src = socio.img; img.alt = socio.nombre; img.style.opacity = '1'; }
+            if (nombreEl)  { nombreEl.textContent = socio.nombre;      nombreEl.style.opacity  = '1'; }
+            if (descripEl) { descripEl.textContent = socio.descripcion; descripEl.style.opacity = '1'; }
         }, 250);
     };
 
-    // Aplicar estilos de transición al cargar
+    /* ── Handler especial para el tag Apple (div wrapper) ── */
+    const appleWrapper = document.getElementById('tag-apple');
+    if (appleWrapper) {
+        appleWrapper.addEventListener('click', function () {
+            const socio   = datosSocios['apple'];
+            const img     = document.getElementById('display-logo');
+            const nombre  = document.getElementById('partner-nombre');
+            const desc    = document.getElementById('partner-descripcion');
+
+            /* Quitar activo de todos */
+            document.querySelectorAll('.partners-tags span').forEach(s => s.classList.remove('partner-active'));
+            appleWrapper.classList.remove('partner-active');
+
+            /* Fade out → cambiar → fade in */
+            if (img)    img.style.opacity    = '0';
+            if (nombre) nombre.style.opacity = '0';
+            if (desc)   desc.style.opacity   = '0';
+
+            setTimeout(() => {
+                if (img)    { img.src = socio.img; img.alt = socio.nombre; img.style.opacity = '1'; }
+                if (nombre) { nombre.textContent = socio.nombre;      nombre.style.opacity = '1'; }
+                if (desc)   { desc.textContent   = socio.descripcion; desc.style.opacity   = '1'; }
+            }, 250);
+
+            appleWrapper.classList.add('partner-active');
+        });
+    }
+
+    /* Transiciones al cargar */
     const imgEl    = document.getElementById('display-logo');
     const nombreEl = document.getElementById('partner-nombre');
     const descripEl = document.getElementById('partner-descripcion');
-    if (imgEl)    imgEl.style.transition    = 'opacity 0.25s ease';
-    if (nombreEl) nombreEl.style.transition = 'opacity 0.25s ease';
+    if (imgEl)     imgEl.style.transition     = 'opacity 0.25s ease';
+    if (nombreEl)  nombreEl.style.transition  = 'opacity 0.25s ease';
     if (descripEl) descripEl.style.transition = 'opacity 0.25s ease';
 
-    // Marcar Microsoft como activo por defecto
+    /* Marcar Microsoft como activo por defecto */
     const defaultSpan = document.querySelector('.partners-tags span[onclick*="msft"]');
     if (defaultSpan) defaultSpan.classList.add('partner-active');
 

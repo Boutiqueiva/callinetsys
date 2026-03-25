@@ -1,0 +1,332 @@
+/* =============================================
+   CAMPUS.CSS — Slider campus con título
+   ============================================= */
+
+/* ── Sección ── */
+.campus-highlight {
+  padding: 90px 7%;
+  background: linear-gradient(160deg, #f4f9ff 0%, #ffffff 50%, #eef7f1 100%);
+}
+
+/* ── Título de sección ── */
+.campus-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.campus-section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0d1117;
+  margin-bottom: 14px;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.campus-section-header p {
+  font-size: 1.1rem;
+  color: #555555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ── Slides del campus ── */
+.slideC {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+.slideC.active {
+  display: block;
+}
+
+/* ── Card: misma estructura que el slider de arriba ── */
+.campus-highlight-card {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  min-height: 470px;
+}
+
+/* ── Lado izquierdo ── */
+.campus-main {
+  padding: 46px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.campus-main h2,
+.campus-main p,
+.campus-main li,
+.campus-main span {
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.campus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eaf3ff;
+  color: #1a5ea4;
+  border: 1px solid #c8ddf3;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 14px;
+  align-self: flex-start;
+}
+
+.campus-badge-univ {
+  background: #eaf0ff;
+  color: #1a3fa4;
+  border-color: #c3d3f7;
+}
+
+.campus-main h2 {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  line-height: 1.12;
+  margin-bottom: 14px;
+  color: #0d1117;
+  text-wrap: balance;
+}
+
+.campus-main .lead {
+  color: #555555;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+
+.campus-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 14px 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.campus-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #2d3b4b;
+  line-height: 1.45;
+  font-size: 0.98rem;
+  background: #f9fcff;
+  border: 1px solid #e5effa;
+  border-radius: 14px;
+  padding: 12px;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.campus-features i {
+  color: #1f8a45;
+  margin-top: 3px;
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+/* ── Aside oscuro ── */
+.campus-aside {
+  background: linear-gradient(180deg, #0f2844 0%, #193a5b 100%);
+  color: #fff;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.campus-aside-univ {
+  background: linear-gradient(180deg, #0d1f3c 0%, #162f5c 100%);
+}
+
+.campus-aside h3 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  hyphens: none;
+  word-break: normal;
+}
+
+.campus-aside p {
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 18px;
+  line-height: 1.6;
+  hyphens: none;
+  word-break: normal;
+}
+
+.campus-points {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.campus-points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #e9f1fb;
+}
+
+.campus-points i {
+  color: #7fe6a5;
+  font-size: 0.86rem;
+}
+
+.campus-cta {
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.campus-cta-univ {
+  background: #2563a8;
+}
+.campus-cta-univ:hover {
+  background: #1a4e8f !important;
+  box-shadow: 0 10px 25px rgba(37, 99, 168, 0.35) !important;
+}
+
+/* ── Fila capacidad universidad ── */
+.univ-capacity-row {
+  display: flex;
+  align-items: center;
+  background: #f0f5ff;
+  border: 1px solid #d0def8;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 14px 0 20px;
+  gap: 0;
+}
+
+.univ-capacity-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.univ-capacity-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a3fa4;
+  line-height: 1;
+}
+
+.univ-capacity-label {
+  font-size: 0.76rem;
+  color: #4a5f82;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.univ-capacity-label em {
+  font-style: normal;
+  font-weight: 700;
+  color: #1a3fa4;
+  display: block;
+}
+
+.univ-capacity-divider {
+  width: 1px;
+  height: 48px;
+  background: #c3d3f7;
+  flex-shrink: 0;
+  margin: 0 18px;
+}
+
+/* ── Precio universidad ── */
+.univ-price-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.univ-price-tag {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.univ-price-unit {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+.univ-price-contract {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.48);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 980px) {
+  .campus-highlight {
+    padding: 70px 5%;
+  }
+  .campus-section-header h2 {
+    font-size: 2rem;
+  }
+  .campus-section-header {
+    margin-bottom: 40px;
+  }
+  .campus-highlight-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .campus-main {
+    padding: 32px 22px;
+  }
+  .campus-aside {
+    padding: 28px 22px;
+  }
+  .campus-features {
+    grid-template-columns: 1fr;
+  }
+  .univ-capacity-num {
+    font-size: 1.9rem;
+  }
+  .univ-price-tag {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .campus-section-header h2 {
+    font-size: 1.75rem;
+  }
+  .univ-capacity-row {
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+  .univ-capacity-divider {
+    width: 60px;
+    height: 1px;
+    margin: 0;
+  }
+}

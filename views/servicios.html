@@ -6,36 +6,31 @@
     <title>Servicios | Callinetsys México</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
 
     <nav class="navbar" id="navbar">
         <div class="logo-container">
-            <a href="index.html">
-                <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
+            <a href="/index.html">
+                <img src="/src/logo.png" alt="Callinetsys Logo" class="nav-logo">
                 <span class="logo-text">CALLINETSYS</span>
             </a>
         </div>
-
         <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="nosotros.html">NOSOTROS</a></li>
-            <li><a href="servicios.html" class="active">SERVICIOS</a></li>
-            <li><a href="partners.html">PARTNERS</a></li>
-            <li class="mobile-only"><a href="contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/views/nosotros.html">NOSOTROS</a></li>
+            <li><a href="/views/servicios.html" class="active">SERVICIOS</a></li>
+            <li><a href="/views/partners.html">PARTNERS</a></li>
+            <li class="mobile-only"><a href="/views/contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
         </ul>
-
         <div class="nav-actions">
-            <a href="contacto.html" class="btn-nav">Contáctanos</a>
+            <a href="/views/contacto.html" class="btn-nav">Contáctanos</a>
         </div>
-
         <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
-
         <div class="nav-overlay" id="nav-overlay"></div>
     </nav>
 
@@ -44,16 +39,14 @@
         <p>Soluciones tecnológicas integrales para transformar y potenciar tu negocio en la era digital.</p>
     </section>
 
+    <!-- ── Slider 1: Servicios Principales ── -->
     <section class="servicios-slider">
         <div class="container">
             <h2 class="section-header">Servicios Principales</h2>
-
             <div class="slider-container">
-                <button class="slider-btn prev" onclick="moveSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
+                <button class="slider-btn prev" id="s1-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-wrapper" id="slider1">
 
-                <div class="slider-wrapper" id="slider">
                     <div class="slide active">
                         <div class="slide-layout service-layout">
                             <div class="service-main">
@@ -71,7 +64,7 @@
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Más control de negocio, menos incertidumbre operativa.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -94,7 +87,7 @@
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Operación más flexible con continuidad y seguridad.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -117,7 +110,7 @@
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Menor exposición a amenazas y mayor confianza operativa.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -140,7 +133,7 @@
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Procesos más ágiles y decisiones con mejor precisión.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -163,68 +156,38 @@
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Una operación moderna, conectada y orientada a crecimiento.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
                     </div>
+
                 </div>
-
-                <button class="slider-btn next" onclick="moveSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <button class="slider-btn next" id="s1-next"><i class="fas fa-chevron-right"></i></button>
             </div>
-
-            <div class="slider-dots" id="dots"></div>
+            <div class="slider-dots" id="dots1"></div>
         </div>
     </section>
 
+    <!-- ── Grid de más servicios ── -->
     <section class="servicios-grid">
         <h2 class="grid-title">Más Servicios</h2>
         <div class="services-cards">
-            <div class="service-card">
-                <i class="fas fa-server"></i>
-                <h4>Virtualización</h4>
-                <p>Soluciones de virtualización con VMware y Hyper-V para optimizar recursos y reducir costos de infraestructura.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-database"></i>
-                <h4>Bases de Datos</h4>
-                <p>Administración, optimización y migración de bases de datos SQL Server, Oracle, MySQL y PostgreSQL.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-network-wired"></i>
-                <h4>Redes y Conectividad</h4>
-                <p>Diseño e implementación de redes empresariales, Wi-Fi corporativo y soluciones de conectividad segura.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h4>Desarrollo Móvil</h4>
-                <p>Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-headset"></i>
-                <h4>Soporte Técnico</h4>
-                <p>Soporte especializado 24/7, mesa de ayuda y administración de servicios TI (ITSM).</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h4>Consultoría TI</h4>
-                <p>Asesoría estratégica en tecnología, auditorías IT y planes de continuidad de negocio.</p>
-            </div>
+            <div class="service-card"><i class="fas fa-server"></i><h4>Virtualización</h4><p>Soluciones de virtualización con VMware y Hyper-V para optimizar recursos y reducir costos de infraestructura.</p></div>
+            <div class="service-card"><i class="fas fa-database"></i><h4>Bases de Datos</h4><p>Administración, optimización y migración de bases de datos SQL Server, Oracle, MySQL y PostgreSQL.</p></div>
+            <div class="service-card"><i class="fas fa-network-wired"></i><h4>Redes y Conectividad</h4><p>Diseño e implementación de redes empresariales, Wi-Fi corporativo y soluciones de conectividad segura.</p></div>
+            <div class="service-card"><i class="fas fa-mobile-alt"></i><h4>Desarrollo Móvil</h4><p>Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.</p></div>
+            <div class="service-card"><i class="fas fa-headset"></i><h4>Soporte Técnico</h4><p>Soporte especializado 24/7, mesa de ayuda y administración de servicios TI (ITSM).</p></div>
+            <div class="service-card"><i class="fas fa-chart-line"></i><h4>Consultoría TI</h4><p>Asesoría estratégica en tecnología, auditorías IT y planes de continuidad de negocio.</p></div>
         </div>
     </section>
 
-    <!-- ── Slider IDA 360 / Conectividad ── -->
+    <!-- ── Slider 2: Colegios y Conectividad ── -->
     <section class="servicios-slider" style="background: linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%); padding-top: 80px;">
         <div class="container">
             <h2 class="section-header">Soluciones para Colegios y Conectividad</h2>
-
             <div class="slider-container">
-                <button class="slider-btn prev" onclick="moveSlide2(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
+                <button class="slider-btn prev" id="s2-prev"><i class="fas fa-chevron-left"></i></button>
                 <div class="slider-wrapper" id="slider2">
 
                     <div class="slide2 active">
@@ -240,11 +203,11 @@
                                 </ul>
                             </div>
                             <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/fibra.webp" alt="Instalación de cable de fibra óptica"></div>
+                                <div class="service-aside-media"><img src="src/fibra.webp" alt="Fibra óptica"></div>
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Conectividad de alta velocidad estable y lista para escalar.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -267,7 +230,7 @@
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Operación continua sin caídas ni interrupciones de servicio.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -286,11 +249,11 @@
                                 </ul>
                             </div>
                             <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/engranes.jpg" alt="Modernización de infraestructura escolar"></div>
+                                <div class="service-aside-media"><img src="src/engranes.jpg" alt="Modernización escolar"></div>
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Equipos modernizados operando sin inversión millonaria inicial.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar diagnóstico</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar diagnóstico</a>
                                 </div>
                             </aside>
                         </div>
@@ -309,11 +272,11 @@
                                 </ul>
                             </div>
                             <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/crecimiento.png" alt="Modernización con presupuesto controlado"></div>
+                                <div class="service-aside-media"><img src="src/crecimiento.png" alt="Presupuesto controlado"></div>
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Tecnología de punta con costos bajo control desde el día uno.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -332,11 +295,11 @@
                                 </ul>
                             </div>
                             <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/ruta.webp" alt="Wi-Fi estable para colegios"></div>
+                                <div class="service-aside-media"><img src="src/ruta.webp" alt="Wi-Fi colegios"></div>
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Clases sin cortes y operación escolar siempre conectada.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Agenda tu diagnóstico</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Agenda tu diagnóstico</a>
                                 </div>
                             </aside>
                         </div>
@@ -355,11 +318,11 @@
                                 </ul>
                             </div>
                             <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/centromando.webp" alt="Seguridad escolar inteligente"></div>
+                                <div class="service-aside-media"><img src="src/centromando.webp" alt="Seguridad escolar"></div>
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Plantel protegido con tecnología avanzada y costos accesibles.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
@@ -378,55 +341,124 @@
                                 </ul>
                             </div>
                             <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/nube.jpg" alt="Colegio Digital Accesible 360"></div>
+                                <div class="service-aside-media"><img src="src/nube.jpg" alt="Colegio Digital 360"></div>
                                 <div class="service-aside-body">
                                     <h4>Resultado esperado</h4>
                                     <p>Un colegio moderno, seguro y conectado con un solo proveedor.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
+                                    <a href="/views/contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
                                 </div>
                             </aside>
                         </div>
                     </div>
 
                 </div>
-
-                <button class="slider-btn next" onclick="moveSlide2(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <button class="slider-btn next" id="s2-next"><i class="fas fa-chevron-right"></i></button>
             </div>
-
             <div class="slider-dots" id="dots2"></div>
         </div>
     </section>
-
     <section class="campus-highlight">
-        <div class="campus-highlight-card">
-            <div class="campus-main">
-                <span class="campus-badge"><i class="fas fa-school"></i> Campus Inteligente Administrado</span>
-                <h2>Moderniza tu colegio sin reemplazar toda tu infraestructura</h2>
-                <p class="lead">Paquete diseñado para colegios privados que necesitan tecnología actual, operación estable y costos controlados. Pago mensual accesible, soporte continuo y resultados visibles desde la primera etapa.</p>
-                <ul class="campus-features">
-                    <li><i class="fas fa-check-circle"></i><span>Migración de equipos a sistema moderno (fin del soporte de Windows 10).</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Administración de red para operación estable y monitoreada.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Wi-Fi de última generación (Wi-Fi 6/7 según proyecto).</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Video vigilancia inteligente para protección y control.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Control de acceso para áreas clave del plantel.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Soporte continuo con atención especializada.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Capacitación incluida para tu equipo operativo y académico.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Modernizamos laboratorios de cómputo sin reemplazar todo.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Tecnología funcionando sin complicaciones, con mensualidad accesible.</span></li>
-                </ul>
+        <div class="container" style="max-width:1400px; margin:0 auto;">
+
+            <!-- Título de sección -->
+            <div class="campus-section-header">
+                <h2>Soluciones diseñadas para instituciones educativas</h2>
+                <p>Tecnología administrada, conectividad estable y seguridad inteligente para colegios y universidades que quieren crecer sin complicaciones.</p>
             </div>
-            <aside class="campus-aside">
-                <h3>Listo para vender y ejecutar</h3>
-                <p>Paquete completo para que tu equipo de marketing y programadores lo implemente como oferta principal.</p>
-                <ul class="campus-points">
-                    <li><i class="fas fa-circle"></i><span>Sin inversión inicial elevada</span></li>
-                    <li><i class="fas fa-circle"></i><span>Continuidad académica garantizada</span></li>
-                    <li><i class="fas fa-circle"></i><span>Escalable por fases</span></li>
-                </ul>
-                <a href="contacto.html" class="btn-primary campus-cta">Quiero un diagnóstico para mi colegio</a>
-            </aside>
+
+            <!-- Slider campus: misma estructura que los de arriba -->
+            <div class="slider-container" style="max-width:1160px;">
+                <button class="slider-btn prev" id="sc-prev"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="slider-wrapper" id="sliderC">
+
+                    <!-- SLIDE 1: Colegios -->
+                    <div class="slideC active">
+                        <div class="campus-highlight-card">
+                            <div class="campus-main">
+                                <span class="campus-badge"><i class="fas fa-school"></i> Campus Inteligente Administrado</span>
+                                <h2>Moderniza tu colegio sin reemplazar toda tu infraestructura</h2>
+                                <p class="lead">Paquete diseñado para colegios privados que necesitan tecnología actual, operación estable y costos controlados. Pago mensual accesible, soporte continuo y resultados visibles desde la primera etapa.</p>
+                                <ul class="campus-features">
+                                    <li><i class="fas fa-check-circle"></i><span>Migración de equipos a sistema moderno (fin del soporte de Windows 10).</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Administración de red para operación estable y monitoreada.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Wi-Fi de última generación (Wi-Fi 6/7 según proyecto).</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Video vigilancia inteligente para protección y control.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Control de acceso para áreas clave del plantel.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Soporte continuo con atención especializada.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Capacitación incluida para tu equipo operativo y académico.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Modernizamos laboratorios de cómputo sin reemplazar todo.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Tecnología funcionando sin complicaciones, con mensualidad accesible.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="campus-aside">
+                                <h3>Listo para vender y ejecutar</h3>
+                                <p>Paquete completo para que tu equipo de marketing y programadores lo implemente como oferta principal.</p>
+                                <ul class="campus-points">
+                                    <li><i class="fas fa-circle"></i><span>Sin inversión inicial elevada</span></li>
+                                    <li><i class="fas fa-circle"></i><span>Continuidad académica garantizada</span></li>
+                                    <li><i class="fas fa-circle"></i><span>Escalable por fases</span></li>
+                                </ul>
+                                <a href="/views/contacto.html" class="btn-primary campus-cta">Quiero un diagnóstico para mi colegio</a>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2: Universidades -->
+                    <div class="slideC">
+                        <div class="campus-highlight-card campus-univ">
+                            <div class="campus-main">
+                                <span class="campus-badge campus-badge-univ"><i class="fas fa-university"></i> Servicio Administrado de Red</span>
+                                <h2>Infraestructura de Conectividad y WiFi para tu universidad</h2>
+                                <p class="lead">Red moderna, segura y administrada para ofrecer conectividad estable y WiFi de alto rendimiento. Operación garantizada durante eventos y reuniones institucionales.</p>
+                                <div class="univ-capacity-row">
+                                    <div class="univ-capacity-item">
+                                        <span class="univ-capacity-num">300</span>
+                                        <span class="univ-capacity-label">usuarios simultáneos<em>Auditorio principal</em></span>
+                                    </div>
+                                    <div class="univ-capacity-divider"></div>
+                                    <div class="univ-capacity-item">
+                                        <span class="univ-capacity-num">50</span>
+                                        <span class="univ-capacity-label">usuarios simultáneos<em>Sala de juntas</em></span>
+                                    </div>
+                                </div>
+                                <ul class="campus-features">
+                                    <li><i class="fas fa-check-circle"></i><span>Router empresarial administrable y switches PoE administrables.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Access Points WiFi 6 de alto rendimiento con cobertura total.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Conversores de fibra óptica, módulos SFP y enlaces de fibra.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Instalación física, configuración y pruebas de conectividad.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Red segmentada: administración, docentes, estudiantes e invitados.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Portal cautivo institucional para autenticación de usuarios.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Monitoreo, administración, firmware y soporte técnico remoto.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Diagnóstico de fallas y revisión preventiva anual incluidos.</span></li>
+                                    <li><i class="fas fa-check-circle"></i><span>Vigencia de propuesta: 15 días naturales a partir de su emisión.</span></li>
+                                </ul>
+                            </div>
+                            <aside class="campus-aside campus-aside-univ">
+                                <h3>Inversión todo incluido</h3>
+                                <p>Un solo pago mensual que cubre infraestructura, instalación, monitoreo y soporte. Sin sorpresas ni costos ocultos.</p>
+                                <div class="univ-price-highlight">
+                                    <span class="univ-price-tag">$2,200</span>
+                                    <span class="univ-price-unit">MXN / mes + IVA</span>
+                                    <span class="univ-price-contract">Contrato 36 meses</span>
+                                </div>
+                                <ul class="campus-points">
+                                    <li><i class="fas fa-circle"></i><span>Hardware incluido sin costo inicial</span></li>
+                                    <li><i class="fas fa-circle"></i><span>Instalación y configuración incluidas</span></li>
+                                    <li><i class="fas fa-circle"></i><span>Soporte técnico especializado</span></li>
+                                </ul>
+                                <a href="/views/contacto.html" class="btn-primary campus-cta campus-cta-univ">Quiero esta propuesta para mi universidad</a>
+                            </aside>
+                        </div>
+                    </div>
+
+                </div><!-- /sliderC -->
+
+                <button class="slider-btn next" id="sc-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="slider-dots" id="dotsC"></div>
+
         </div>
     </section>
 
@@ -446,11 +478,11 @@
             </div>
             <div class="footer-links">
                 <h4>Enlaces Rápidos</h4>
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="partners.html">Partners</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="/index.html">Inicio</a>
+                <a href="/views/nosotros.html">Nosotros</a>
+                <a href="/views/servicios.html">Servicios</a>
+                <a href="/views/partners.html">Partners</a>
+                <a href="/views/contacto.html">Contacto</a>
             </div>
             <div class="footer-links">
                 <h4>Contacto</h4>
@@ -459,165 +491,10 @@
                 <a href="https://maps.app.goo.gl/GurRgNm7VndYgKfi8" target="_blank"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            © 2026 Callinetsys México. Todos los derechos reservados.
-        </div>
+        <div class="footer-bottom">© 2026 Callinetsys México. Todos los derechos reservados.</div>
     </footer>
 
-    <script>
-        /* ── Slider ── */
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dotsContainer = document.getElementById('dots');
-
-        function createDots() {
-            slides.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.onclick = () => goToSlide(i);
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function updateDots() {
-            document.querySelectorAll('.dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide);
-            });
-        }
-
-        function showSlide(index) {
-            if (index < 0) index = slides.length - 1;
-            if (index >= slides.length) index = 0;
-            slides.forEach(s => s.classList.remove('active'));
-            slides[index].classList.add('active');
-            currentSlide = index;
-            updateDots();
-        }
-
-        function moveSlide(dir) { showSlide(currentSlide + dir); }
-        function goToSlide(i) { showSlide(i); }
-
-        /* ── Slider 2 (IDA / Conectividad) ── */
-        let currentSlide2 = 0;
-        const slides2 = document.querySelectorAll('.slide2');
-        const dotsContainer2 = document.getElementById('dots2');
-
-        (function initSlider2() {
-            slides2.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.onclick = () => goToSlide2(i);
-                dotsContainer2.appendChild(dot);
-            });
-        })();
-
-        function updateDots2() {
-            dotsContainer2.querySelectorAll('.dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide2);
-            });
-        }
-
-        function showSlide2(index) {
-            if (index < 0) index = slides2.length - 1;
-            if (index >= slides2.length) index = 0;
-            slides2.forEach(s => s.classList.remove('active'));
-            slides2[index].classList.add('active');
-            currentSlide2 = index;
-            updateDots2();
-        }
-
-        function moveSlide2(dir) { showSlide2(currentSlide2 + dir); }
-        function goToSlide2(i)   { showSlide2(i); }
-
-        /* ── Ir al slide2 desde URL ?slide2=N ── */
-        (function () {
-            const params = new URLSearchParams(window.location.search);
-            const idx = parseInt(params.get('slide2'), 10);
-            if (!isNaN(idx)) {
-                document.addEventListener('DOMContentLoaded', function () {
-                    showSlide2(idx);
-                    const slider2section = document.getElementById('slider2');
-                    if (slider2section) {
-                        setTimeout(() => {
-                            slider2section.closest('.servicios-slider').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }, 200);
-                    }
-                });
-            }
-        })();
-
-        /* ── Smart Navbar (ocultar al bajar, mostrar al subir) ── */
-        (function () {
-            const navbar = document.getElementById('navbar');
-            let lastScrollY = window.scrollY;
-            let ticking = false;
-
-            function updateNavbar() {
-                const currentScrollY = window.scrollY;
-
-                if (currentScrollY <= 10) {
-                    // Siempre visible en la cima
-                    navbar.classList.remove('navbar-hidden');
-                } else if (currentScrollY > lastScrollY) {
-                    // Bajando → ocultar
-                    navbar.classList.add('navbar-hidden');
-                } else {
-                    // Subiendo → mostrar
-                    navbar.classList.remove('navbar-hidden');
-                }
-
-                lastScrollY = currentScrollY;
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    requestAnimationFrame(updateNavbar);
-                    ticking = true;
-                }
-            }, { passive: true });
-        })();
-
-        /* ── Hamburger menu ── */
-        (function () {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks  = document.getElementById('nav-links');
-            const overlay   = document.getElementById('nav-overlay');
-
-            function toggleMenu(open) {
-                hamburger.classList.toggle('active', open);
-                navLinks.classList.toggle('active', open);
-                overlay.classList.toggle('active', open);
-                document.body.style.overflow = open ? 'hidden' : '';
-            }
-
-            hamburger.addEventListener('click', () => {
-                const isOpen = navLinks.classList.contains('active');
-                toggleMenu(!isOpen);
-            });
-
-            overlay.addEventListener('click', () => toggleMenu(false));
-
-            navLinks.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', () => toggleMenu(false));
-            });
-        })();
-
-        /* ── Chat trigger visibility ── */
-        (function () {
-            const chatTrigger = document.getElementById('chat-trigger');
-            function toggleChat() {
-                chatTrigger.classList.toggle('visible', window.scrollY > 180);
-            }
-            toggleChat();
-            window.addEventListener('scroll', toggleChat, { passive: true });
-        })();
-
-        document.addEventListener('DOMContentLoaded', createDots);
-    </script>
-
-    <script src="chatbot.js"></script>
+    <script src="/js/servicios.js"></script>
+    <script src="/js/chatbot.js"></script>
 </body>
 </html>
