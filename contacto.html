@@ -7,7 +7,7 @@
     <title>Contacto | Callinetsys México</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         .contacto-hero {
             padding: 100px 7%;
@@ -348,13 +348,13 @@
 
     <nav class="navbar">
         <div class="logo-container">
-            <a href="/index.html">
+            <a href="index.html">
                 <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
                 <span class="logo-text">CALLINETSYS</span>
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="index.html">INICIO</a></li>
             <li><a href="nosotros.html">NOSOTROS</a></li>
             <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="partners.html">PARTNERS</a></li>
@@ -641,6 +641,11 @@
     <script src="chatbot.js"></script>
 
     <script>
+        /* ══════════════════════════════════════════
+           FORMULARIO → WHATSAPP
+           Número del Ing. Fernando Ramírez:
+           +52 1 55 4143 1589
+           ══════════════════════════════════════════ */
         var WA_NUMBER = '5215541431589';
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -710,13 +715,13 @@
 
                 /* ── 2. Abrir WhatsApp (simultáneo) ── */
                 var texto =
-                    ' *Nuevo contacto desde callinetsys.com*\n\n' +
-                    ' *Nombre:* ' + nombre + '\n' +
+                    '🔔 *Nuevo contacto desde callinetsys.com*\n\n' +
+                    '👤 *Nombre:* ' + nombre + '\n' +
                     (empresa ? '🏢 *Empresa:* ' + empresa + '\n' : '') +
-                    ' *Email:* ' + email + '\n' +
-                    ' *Teléfono:* ' + telefono + '\n' +
-                    ' *Asunto:* ' + asunto + '\n\n' +
-                    ' *Mensaje:*\n' + mensaje;
+                    '📧 *Email:* ' + email + '\n' +
+                    '📱 *Teléfono:* ' + telefono + '\n' +
+                    '📌 *Asunto:* ' + asunto + '\n\n' +
+                    '💬 *Mensaje:*\n' + mensaje;
 
                 var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(texto);
                 window.open(url, '_blank');
