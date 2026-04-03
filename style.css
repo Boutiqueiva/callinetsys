@@ -2556,7 +2556,7 @@ span[tabindex]:focus-visible {
 
 /* =========================================
     18. APPLE BANNER — Distribuidor Oficial
-   ========================================= */
+========================================= */
 .apple-banner {
   background: linear-gradient(135deg, #0d1117 0%, #161b27 50%, #0d1117 100%);
   padding: 80px 7%;
@@ -2650,9 +2650,12 @@ span[tabindex]:focus-visible {
   font-weight: 800;
   color: #ffffff;
   line-height: 1.15;
-  hyphens: none;
-  word-break: normal;
   margin: 0;
+}
+
+/* Mejora salto de línea */
+.apple-banner-title br {
+  display: none;
 }
 
 .apple-banner-right {
@@ -2666,8 +2669,6 @@ span[tabindex]:focus-visible {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.75;
   margin: 0;
-  hyphens: none;
-  word-break: normal;
 }
 
 .apple-banner-actions {
@@ -2721,63 +2722,86 @@ span[tabindex]:focus-visible {
   transform: translateY(-2px);
 }
 
-/* ── Tag Apple en socios ── */
-.apple-tag-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  cursor: pointer;
-  gap: 4px;
-}
+/* ================================
+   RESPONSIVE
+================================ */
 
-.apple-tag-badge {
-  background: #0d1117;
-  color: #fff;
-  font-size: 0.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 2px 7px;
-  border-radius: 999px;
-  white-space: nowrap;
-  line-height: 1.5;
-  align-self: flex-end;
-  margin-bottom: -2px;
-}
+/* Tablets */
+@media (max-width: 992px) {
+  .apple-banner-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
 
-.apple-tag-inner {
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  background: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.3s ease;
-  user-select: none;
-  white-space: nowrap;
-}
+  .apple-banner-left,
+  .apple-banner-right {
+    align-items: center;
+  }
 
-.apple-tag-wrapper:hover .apple-tag-inner,
-.apple-tag-wrapper.partner-active .apple-tag-inner {
-  background: var(--blue);
-  color: white;
-  border-color: var(--blue);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(33, 114, 184, 0.25);
-}
+  .apple-banner-actions {
+    justify-content: center;
+  }
 
-@media (max-width: 768px) {
-  .apple-tag-inner {
-    padding: 8px 16px;
-    font-size: 0.85rem;
+  .apple-banner-title {
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+  }
+
+  .apple-banner-desc {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+
+  .apple-banner-title br {
+    display: block;
   }
 }
+
+/* Móviles */
+@media (max-width: 600px) {
+  .apple-banner {
+    padding: 60px 5%;
+  }
+
+  .apple-banner-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .apple-banner-icon i {
+    font-size: 2.2rem;
+  }
+
+  .apple-banner-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .apple-banner-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .apple-banner-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .apple-banner-cta-primary,
+  .apple-banner-cta-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+  }
+}
+
+/* Móviles pequeños */
 @media (max-width: 360px) {
-  .apple-tag-inner {
-    padding: 7px 14px;
-    font-size: 0.8rem;
+  .apple-banner-title {
+    font-size: 1.4rem;
+  }
+
+  .apple-banner-desc {
+    font-size: 0.9rem;
   }
 }
