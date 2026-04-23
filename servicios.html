@@ -1,504 +1,1074 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicios | Callinetsys México</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="campus.css">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="campus.css" />
+  </head>
+  <body>
     <nav class="navbar" id="navbar">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
-                <span class="logo-text">CALLINETSYS</span>
-            </a>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="nosotros.html">NOSOTROS</a></li>
-            <li><a href="servicios.html" class="active">SERVICIOS</a></li>
-            <li><a href="partners.html">PARTNERS</a></li>
-            <li class="mobile-only"><a href="contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
-        </ul>
-        <div class="nav-actions">
-            <a href="contacto.html" class="btn-nav">Contáctanos</a>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="nav-overlay" id="nav-overlay"></div>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo" />
+          <span class="logo-text">CALLINETSYS</span>
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+        <li><a href="servicios.html" class="active">SERVICIOS</a></li>
+        <li><a href="partners.html">PARTNERS</a></li>
+        <li class="mobile-only">
+          <a href="contacto.html" class="btn-nav-mobile">Contáctanos</a>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contacto.html" class="btn-nav">Contáctanos</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-overlay" id="nav-overlay"></div>
     </nav>
 
     <section class="servicios-hero">
-        <h1>NUESTROS SERVICIOS</h1>
-        <p>Soluciones tecnológicas integrales para transformar y potenciar tu negocio en la era digital.</p>
+      <h1>NUESTROS SERVICIOS</h1>
+      <p>
+        Soluciones tecnológicas integrales para transformar y potenciar tu
+        negocio en la era digital.
+      </p>
     </section>
 
     <!-- ── Slider 1: Servicios Principales ── -->
     <section class="servicios-slider">
-        <div class="container">
-            <h2 class="section-header">Servicios Principales</h2>
-            <div class="slider-container">
-                <button class="slider-btn prev" id="s1-prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-wrapper" id="slider1">
-
-                    <div class="slide active">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-star"></i> Servicio principal</span>
-                                <h3>BIG DATA Y ANALYTICS</h3>
-                                <p>Convertimos datos en decisiones estratégicas con analítica avanzada, machine learning y tableros ejecutivos. Tu negocio gana visibilidad, predicción y velocidad para responder al mercado.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Modelos predictivos y dashboards ejecutivos.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Automatización de reportes críticos.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Decisiones con datos en tiempo real.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/big.png" alt="Big Data y Analytics"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Más control de negocio, menos incertidumbre operativa.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-cloud"></i> Servicio principal</span>
-                                <h3>INFRAESTRUCTURA EN LA NUBE</h3>
-                                <p>Diseñamos, migramos y administramos infraestructura cloud con alta disponibilidad, seguridad y escalabilidad. Optimizamos costos en Azure y plataformas líderes para que tu operación crezca sin fricciones.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Migración segura y controlada a la nube.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Arquitecturas escalables por demanda.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Optimización de costos y rendimiento.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/nube2.jpg" alt="Infraestructura en la nube"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Operación más flexible con continuidad y seguridad.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-shield-alt"></i> Servicio principal</span>
-                                <h3>SEGURIDAD INFORMÁTICA</h3>
-                                <p>Protegemos sistemas, redes y datos con una estrategia integral: evaluación de vulnerabilidades, hardening, protección de endpoints y respuesta a incidentes para reducir riesgos reales.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Evaluación de vulnerabilidades y hardening.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Protección de endpoints y perímetro.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Respuesta rápida ante incidentes.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/seg.webp" alt="Seguridad informática empresarial"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Menor exposición a amenazas y mayor confianza operativa.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-robot"></i> Servicio principal</span>
-                                <h3>INTELIGENCIA ARTIFICIAL</h3>
-                                <p>Implementamos IA aplicada para automatizar procesos, mejorar la toma de decisiones y acelerar resultados con soluciones prácticas alineadas a tus objetivos de negocio.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Automatización de tareas repetitivas.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Modelos de apoyo a decisiones estratégicas.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Mayor productividad de tus equipos.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/gemi.jpg" alt="Soluciones de inteligencia artificial"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Procesos más ágiles y decisiones con mejor precisión.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-sync-alt"></i> Servicio principal</span>
-                                <h3>TRANSFORMACIÓN DIGITAL</h3>
-                                <p>Acompañamos la digitalización de punta a punta: procesos, herramientas colaborativas y arquitectura tecnológica para mejorar productividad, control y experiencia de cliente.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Optimización de procesos clave.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Implementación tecnológica por fases.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Ejecución alineada a objetivos del negocio.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/before-after.jpg" alt="Transformación digital empresarial"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Una operación moderna, conectada y orientada a crecimiento.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
+      <div class="container">
+        <h2 class="section-header">Servicios Principales</h2>
+        <div class="slider-container">
+          <button class="slider-btn prev" id="s1-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-wrapper" id="slider1">
+            <div class="slide active">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-star"></i> Servicio principal</span
+                  >
+                  <h3>BIG DATA Y ANALYTICS</h3>
+                  <p>
+                    Convertimos datos en decisiones estratégicas con analítica
+                    avanzada, machine learning y tableros ejecutivos. Tu negocio
+                    gana visibilidad, predicción y velocidad para responder al
+                    mercado.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Modelos predictivos y dashboards ejecutivos.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Automatización de reportes críticos.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Decisiones con datos en tiempo real.</span>
+                    </li>
+                  </ul>
                 </div>
-                <button class="slider-btn next" id="s1-next"><i class="fas fa-chevron-right"></i></button>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/big.png" alt="Big Data y Analytics" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Más control de negocio, menos incertidumbre operativa.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
             </div>
-            <div class="slider-dots" id="dots1"></div>
+
+            <div class="slide">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-cloud"></i> Servicio principal</span
+                  >
+                  <h3>INFRAESTRUCTURA EN LA NUBE</h3>
+                  <p>
+                    Diseñamos, migramos y administramos infraestructura cloud
+                    con alta disponibilidad, seguridad y escalabilidad.
+                    Optimizamos costos en Azure y plataformas líderes para que
+                    tu operación crezca sin fricciones.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Migración segura y controlada a la nube.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Arquitecturas escalables por demanda.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Optimización de costos y rendimiento.</span>
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/nube2.jpg" alt="Infraestructura en la nube" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>Operación más flexible con continuidad y seguridad.</p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-shield-alt"></i> Servicio principal</span
+                  >
+                  <h3>SEGURIDAD INFORMÁTICA</h3>
+                  <p>
+                    Protegemos sistemas, redes y datos con una estrategia
+                    integral: evaluación de vulnerabilidades, hardening,
+                    protección de endpoints y respuesta a incidentes para
+                    reducir riesgos reales.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Evaluación de vulnerabilidades y hardening.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Protección de endpoints y perímetro.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Respuesta rápida ante incidentes.</span>
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img
+                      src="src/seg.webp"
+                      alt="Seguridad informática empresarial"
+                    />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Menor exposición a amenazas y mayor confianza operativa.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-robot"></i> Servicio principal</span
+                  >
+                  <h3>INTELIGENCIA ARTIFICIAL</h3>
+                  <p>
+                    Implementamos IA aplicada para automatizar procesos, mejorar
+                    la toma de decisiones y acelerar resultados con soluciones
+                    prácticas alineadas a tus objetivos de negocio.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Automatización de tareas repetitivas.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Modelos de apoyo a decisiones estratégicas.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Mayor productividad de tus equipos.</span>
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img
+                      src="src/gemi.jpg"
+                      alt="Soluciones de inteligencia artificial"
+                    />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>Procesos más ágiles y decisiones con mejor precisión.</p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-sync-alt"></i> Servicio principal</span
+                  >
+                  <h3>TRANSFORMACIÓN DIGITAL</h3>
+                  <p>
+                    Acompañamos la digitalización de punta a punta: procesos,
+                    herramientas colaborativas y arquitectura tecnológica para
+                    mejorar productividad, control y experiencia de cliente.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Optimización de procesos clave.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Implementación tecnológica por fases.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Ejecución alineada a objetivos del negocio.</span>
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img
+                      src="src/before-after.jpg"
+                      alt="Transformación digital empresarial"
+                    />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Una operación moderna, conectada y orientada a
+                      crecimiento.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" id="s1-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+        <div class="slider-dots" id="dots1"></div>
+      </div>
     </section>
 
     <!-- ── Grid de más servicios ── -->
     <section class="servicios-grid">
-        <h2 class="grid-title">Más Servicios</h2>
-        <div class="services-cards">
-            <div class="service-card"><i class="fas fa-server"></i><h4>Virtualización</h4><p>Soluciones de virtualización con VMware y Hyper-V para optimizar recursos y reducir costos de infraestructura.</p></div>
-            <div class="service-card"><i class="fas fa-database"></i><h4>Bases de Datos</h4><p>Administración, optimización y migración de bases de datos SQL Server, Oracle, MySQL y PostgreSQL.</p></div>
-            <div class="service-card"><i class="fas fa-network-wired"></i><h4>Redes y Conectividad</h4><p>Diseño e implementación de redes empresariales, Wi-Fi corporativo y soluciones de conectividad segura.</p></div>
-            <div class="service-card"><i class="fas fa-mobile-alt"></i><h4>Desarrollo Móvil</h4><p>Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.</p></div>
-            <div class="service-card"><i class="fas fa-headset"></i><h4>Soporte Técnico</h4><p>Soporte especializado 24/7, mesa de ayuda y administración de servicios TI (ITSM).</p></div>
-            <div class="service-card"><i class="fas fa-chart-line"></i><h4>Consultoría TI</h4><p>Asesoría estratégica en tecnología, auditorías IT y planes de continuidad de negocio.</p></div>
+      <h2 class="grid-title">Más Servicios</h2>
+      <div class="services-cards">
+        <div class="service-card">
+          <i class="fas fa-server"></i>
+          <h4>Virtualización</h4>
+          <p>
+            Soluciones de virtualización con VMware y Hyper-V para optimizar
+            recursos y reducir costos de infraestructura.
+          </p>
         </div>
+        <div class="service-card">
+          <i class="fas fa-database"></i>
+          <h4>Bases de Datos</h4>
+          <p>
+            Administración, optimización y migración de bases de datos SQL
+            Server, Oracle, MySQL y PostgreSQL.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-network-wired"></i>
+          <h4>Redes y Conectividad</h4>
+          <p>
+            Diseño e implementación de redes empresariales, Wi-Fi corporativo y
+            soluciones de conectividad segura.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>Desarrollo Móvil</h4>
+          <p>
+            Desarrollo de aplicaciones móviles nativas y multiplataforma para
+            iOS y Android.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-headset"></i>
+          <h4>Soporte Técnico</h4>
+          <p>
+            Soporte especializado 24/7, mesa de ayuda y administración de
+            servicios TI (ITSM).
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h4>Consultoría TI</h4>
+          <p>
+            Asesoría estratégica en tecnología, auditorías IT y planes de
+            continuidad de negocio.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- ── Slider 2: Colegios y Conectividad ── -->
-    <section class="servicios-slider" style="background: linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%); padding-top: 80px;">
-        <div class="container">
-            <h2 class="section-header">Soluciones para Colegios y Conectividad</h2>
-            <div class="slider-container">
-                <button class="slider-btn prev" id="s2-prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-wrapper" id="slider2">
-
-                    <div class="slide2 active">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-plug"></i> Conectividad empresarial</span>
-                                <h3>CABLEADO ESTRUCTURADO UTP Y FIBRA ÓPTICA CERTIFICADO</h3>
-                                <p>Diseñamos e instalamos soluciones de cableado estructurado UTP y fibra óptica certificadas para alto rendimiento. La base sólida que toda red empresarial o educativa necesita para operar con estabilidad, velocidad y sin fallas.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Instalación certificada de cableado UTP Cat6/Cat6A y fibra óptica.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Certificación de cada punto de red para garantizar alto rendimiento.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Infraestructura ordenada, documentada y lista para escalar.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/fibra.webp" alt="Fibra óptica"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Conectividad de alta velocidad estable y lista para escalar.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide2">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-wifi"></i> Disponibilidad continua</span>
-                                <h3>INTERNET 7</h3>
-                                <p>Conectividad confiable con cobertura especializada, monitoreo continuo y soporte técnico para mantener tu operación siempre activa sin interrupciones.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Monitoreo 24/7 de tu enlace de Internet.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Soporte técnico dedicado en todo momento.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Cobertura especializada para entornos críticos.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/wifi.webp" alt="Internet 7"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Operación continua sin caídas ni interrupciones de servicio.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide2">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-tools"></i> Transformación escolar</span>
-                                <h3>MODERNIZACIÓN SIN REEMPLAZAR TODO</h3>
-                                <p>Si tu colegio tiene equipos que ya no soportan nuevas versiones, nosotros modernizamos la infraestructura y la administramos por mensualidad accesible, sin tirar lo que ya tienes.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Migración a sistema operativo moderno sin comprar equipo nuevo.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Administración mensual incluida sin ampliar tu plantilla de TI.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Laboratorios funcionales listos para el próximo ciclo escolar.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/engranes.jpg" alt="Modernización escolar"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Equipos modernizados operando sin inversión millonaria inicial.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar diagnóstico</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide2">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-coins"></i> Modelo accesible</span>
-                                <h3>MODERNIZACIÓN CON PRESUPUESTO CONTROLADO</h3>
-                                <p>Tecnología moderna para colegios privados sin inversión millonaria inicial: optimizamos recursos y operamos todo con pago mensual predecible y accesible.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Sin desembolso inicial elevado, pago mensual fijo.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Presupuesto tecnológico predecible cada ciclo.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Implementación por fases alineada a tus posibilidades.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/crecimiento.png" alt="Presupuesto controlado"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Tecnología de punta con costos bajo control desde el día uno.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide2">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-broadcast-tower"></i> Rendimiento de red</span>
-                                <h3>WI-FI ESTABLE PARA CONTINUIDAD ACADÉMICA</h3>
-                                <p>Cuando el Wi-Fi falla, todo el colegio se detiene. Implementamos redes modernas y administradas para asegurar clases y operación sin interrupciones durante todo el ciclo escolar.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Wi-Fi 6 / Wi-Fi 7 según las necesidades del campus.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Cobertura total en aulas, laboratorios y zonas comunes.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Monitoreo preventivo para detectar fallas antes de que ocurran.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/ruta.webp" alt="Wi-Fi colegios"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Clases sin cortes y operación escolar siempre conectada.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Agenda tu diagnóstico</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide2">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-shield-alt"></i> Protección 360</span>
-                                <h3>SEGURIDAD ESCOLAR INTELIGENTE</h3>
-                                <p>Integra videovigilancia inteligente, control de acceso y red segura sin inversión inicial elevada para proteger a toda tu comunidad educativa de forma continua.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Videovigilancia con analítica inteligente en tiempo real.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Control de acceso para áreas sensibles del plantel.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Red segura y segmentada para proteger datos y usuarios.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/centromando.webp" alt="Seguridad escolar"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Plantel protegido con tecnología avanzada y costos accesibles.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <div class="slide2">
-                        <div class="slide-layout service-layout">
-                            <div class="service-main">
-                                <span class="service-badge"><i class="fas fa-layer-group"></i> Servicio integral</span>
-                                <h3>COLEGIO DIGITAL ACCESIBLE 360</h3>
-                                <p>Red, sistemas, Wi-Fi y seguridad en un solo servicio administrado por mensualidad fija, con soporte continuo y crecimiento por fases adaptado a cada institución.</p>
-                                <ul class="service-list">
-                                    <li><i class="fas fa-check-circle"></i><span>Todo en uno: red, sistemas, Wi-Fi y seguridad.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Mensualidad fija sin sorpresas en el presupuesto.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Soporte continuo y crecimiento por fases.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="service-aside">
-                                <div class="service-aside-media"><img src="src/nube.jpg" alt="Colegio Digital 360"></div>
-                                <div class="service-aside-body">
-                                    <h4>Resultado esperado</h4>
-                                    <p>Un colegio moderno, seguro y conectado con un solo proveedor.</p>
-                                    <a href="contacto.html" class="btn-primary service-cta">Solicitar asesoría</a>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-
+    <section
+      class="servicios-slider"
+      style="
+        background: linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%);
+        padding-top: 80px;
+      "
+    >
+      <div class="container">
+        <h2 class="section-header">Soluciones para Colegios y Conectividad</h2>
+        <div class="slider-container">
+          <button class="slider-btn prev" id="s2-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-wrapper" id="slider2">
+            <div class="slide2 active">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-plug"></i> Conectividad empresarial</span
+                  >
+                  <h3>CABLEADO ESTRUCTURADO UTP Y FIBRA ÓPTICA CERTIFICADO</h3>
+                  <p>
+                    Diseñamos e instalamos soluciones de cableado estructurado
+                    UTP y fibra óptica certificadas para alto rendimiento. La
+                    base sólida que toda red empresarial o educativa necesita
+                    para operar con estabilidad, velocidad y sin fallas.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Instalación certificada de cableado UTP Cat6/Cat6A y
+                        fibra óptica.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Certificación de cada punto de red para garantizar alto
+                        rendimiento.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Infraestructura ordenada, documentada y lista para
+                        escalar.</span
+                      >
+                    </li>
+                  </ul>
                 </div>
-                <button class="slider-btn next" id="s2-next"><i class="fas fa-chevron-right"></i></button>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/fibra.webp" alt="Fibra óptica" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Conectividad de alta velocidad estable y lista para
+                      escalar.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
             </div>
-            <div class="slider-dots" id="dots2"></div>
+
+            <div class="slide2">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-wifi"></i> Disponibilidad continua</span
+                  >
+                  <h3>INTERNET 7</h3>
+                  <p>
+                    Conectividad confiable con cobertura especializada,
+                    monitoreo continuo y soporte técnico para mantener tu
+                    operación siempre activa sin interrupciones.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Monitoreo 24/7 de tu enlace de Internet.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Soporte técnico dedicado en todo momento.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Cobertura especializada para entornos críticos.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/wifi.webp" alt="Internet 7" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Operación continua sin caídas ni interrupciones de
+                      servicio.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide2">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-tools"></i> Transformación escolar</span
+                  >
+                  <h3>MODERNIZACIÓN SIN REEMPLAZAR TODO</h3>
+                  <p>
+                    Si tu colegio tiene equipos que ya no soportan nuevas
+                    versiones, nosotros modernizamos la infraestructura y la
+                    administramos por mensualidad accesible, sin tirar lo que ya
+                    tienes.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Migración a sistema operativo moderno sin comprar
+                        equipo nuevo.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Administración mensual incluida sin ampliar tu
+                        plantilla de TI.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Laboratorios funcionales listos para el próximo ciclo
+                        escolar.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/engranes.jpg" alt="Modernización escolar" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Equipos modernizados operando sin inversión millonaria
+                      inicial.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar diagnóstico</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide2">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-coins"></i> Modelo accesible</span
+                  >
+                  <h3>MODERNIZACIÓN CON PRESUPUESTO CONTROLADO</h3>
+                  <p>
+                    Tecnología moderna para colegios privados sin inversión
+                    millonaria inicial: optimizamos recursos y operamos todo con
+                    pago mensual predecible y accesible.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Sin desembolso inicial elevado, pago mensual
+                        fijo.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Presupuesto tecnológico predecible cada ciclo.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Implementación por fases alineada a tus
+                        posibilidades.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img
+                      src="src/crecimiento.png"
+                      alt="Presupuesto controlado"
+                    />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Tecnología de punta con costos bajo control desde el día
+                      uno.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide2">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-broadcast-tower"></i> Rendimiento de
+                    red</span
+                  >
+                  <h3>WI-FI ESTABLE PARA CONTINUIDAD ACADÉMICA</h3>
+                  <p>
+                    Cuando el Wi-Fi falla, todo el colegio se detiene.
+                    Implementamos redes modernas y administradas para asegurar
+                    clases y operación sin interrupciones durante todo el ciclo
+                    escolar.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Wi-Fi 6 / Wi-Fi 7 según las necesidades del
+                        campus.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Cobertura total en aulas, laboratorios y zonas
+                        comunes.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Monitoreo preventivo para detectar fallas antes de que
+                        ocurran.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/ruta.webp" alt="Wi-Fi colegios" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Clases sin cortes y operación escolar siempre conectada.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Agenda tu diagnóstico</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide2">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-shield-alt"></i> Protección 360</span
+                  >
+                  <h3>SEGURIDAD ESCOLAR INTELIGENTE</h3>
+                  <p>
+                    Integra videovigilancia inteligente, control de acceso y red
+                    segura sin inversión inicial elevada para proteger a toda tu
+                    comunidad educativa de forma continua.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Videovigilancia con analítica inteligente en tiempo
+                        real.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Control de acceso para áreas sensibles del
+                        plantel.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Red segura y segmentada para proteger datos y
+                        usuarios.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/centromando.webp" alt="Seguridad escolar" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Plantel protegido con tecnología avanzada y costos
+                      accesibles.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="slide2">
+              <div class="slide-layout service-layout">
+                <div class="service-main">
+                  <span class="service-badge"
+                    ><i class="fas fa-layer-group"></i> Servicio integral</span
+                  >
+                  <h3>COLEGIO DIGITAL ACCESIBLE 360</h3>
+                  <p>
+                    Red, sistemas, Wi-Fi y seguridad en un solo servicio
+                    administrado por mensualidad fija, con soporte continuo y
+                    crecimiento por fases adaptado a cada institución.
+                  </p>
+                  <ul class="service-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Todo en uno: red, sistemas, Wi-Fi y seguridad.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Mensualidad fija sin sorpresas en el presupuesto.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Soporte continuo y crecimiento por fases.</span>
+                    </li>
+                  </ul>
+                </div>
+                <aside class="service-aside">
+                  <div class="service-aside-media">
+                    <img src="src/nube.jpg" alt="Colegio Digital 360" />
+                  </div>
+                  <div class="service-aside-body">
+                    <h4>Resultado esperado</h4>
+                    <p>
+                      Un colegio moderno, seguro y conectado con un solo
+                      proveedor.
+                    </p>
+                    <a href="contacto.html" class="btn-primary service-cta"
+                      >Solicitar asesoría</a
+                    >
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" id="s2-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+        <div class="slider-dots" id="dots2"></div>
+      </div>
     </section>
 
     <!-- ══════════════════════════════════════════
          CAMPUS HIGHLIGHT — slider con flechas y 2 dots
          ══════════════════════════════════════════ -->
     <section class="campus-highlight">
-        <div class="container" style="max-width:1400px; margin:0 auto;">
-
-            <!-- Título de sección -->
-            <div class="campus-section-header">
-                <h2>Soluciones diseñadas para instituciones educativas</h2>
-                <p>Tecnología administrada, conectividad estable y seguridad inteligente para colegios y universidades que quieren crecer sin complicaciones.</p>
-            </div>
-
-            <!-- Slider campus: misma estructura que los de arriba -->
-            <div class="slider-container" style="max-width:1160px;">
-                <button class="slider-btn prev" id="sc-prev"><i class="fas fa-chevron-left"></i></button>
-
-                <div class="slider-wrapper" id="sliderC">
-
-                    <!-- SLIDE 1: Colegios -->
-                    <div class="slideC active">
-                        <div class="campus-highlight-card">
-                            <div class="campus-main">
-                                <span class="campus-badge"><i class="fas fa-school"></i> Campus Inteligente Administrado</span>
-                                <h2>Moderniza tu colegio sin reemplazar toda tu infraestructura</h2>
-                                <p class="lead">Paquete diseñado para colegios privados que necesitan tecnología actual, operación estable y costos controlados. Pago mensual accesible, soporte continuo y resultados visibles desde la primera etapa.</p>
-                                <ul class="campus-features">
-                                    <li><i class="fas fa-check-circle"></i><span>Migración de equipos a sistema moderno (fin del soporte de Windows 10).</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Administración de red para operación estable y monitoreada.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Wi-Fi de última generación (Wi-Fi 6/7 según proyecto).</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Video vigilancia inteligente para protección y control.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Control de acceso para áreas clave del plantel.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Soporte continuo con atención especializada.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Capacitación incluida para tu equipo operativo y académico.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Modernizamos laboratorios de cómputo sin reemplazar todo.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Tecnología funcionando sin complicaciones, con mensualidad accesible.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="campus-aside">
-                                <h3>Listo para vender y ejecutar</h3>
-                                <p>Paquete completo para que tu equipo de marketing y programadores lo implemente como oferta principal.</p>
-                                <ul class="campus-points">
-                                    <li><i class="fas fa-circle"></i><span>Sin inversión inicial elevada</span></li>
-                                    <li><i class="fas fa-circle"></i><span>Continuidad académica garantizada</span></li>
-                                    <li><i class="fas fa-circle"></i><span>Escalable por fases</span></li>
-                                </ul>
-                                <a href="contacto.html" class="btn-primary campus-cta">Quiero un diagnóstico para mi colegio</a>
-                            </aside>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 2: Universidades -->
-                    <div class="slideC">
-                        <div class="campus-highlight-card campus-univ">
-                            <div class="campus-main">
-                                <span class="campus-badge campus-badge-univ"><i class="fas fa-university"></i> Servicio Administrado de Red</span>
-                                <h2>Infraestructura de Conectividad y WiFi para tu universidad</h2>
-                                <p class="lead">Red moderna, segura y administrada para ofrecer conectividad estable y WiFi de alto rendimiento. Operación garantizada durante eventos y reuniones institucionales.</p>
-                                <div class="univ-capacity-row">
-                                    <div class="univ-capacity-item">
-                                        <span class="univ-capacity-num">300</span>
-                                        <span class="univ-capacity-label">usuarios simultáneos<em>Auditorio principal</em></span>
-                                    </div>
-                                    <div class="univ-capacity-divider"></div>
-                                    <div class="univ-capacity-item">
-                                        <span class="univ-capacity-num">50</span>
-                                        <span class="univ-capacity-label">usuarios simultáneos<em>Sala de juntas</em></span>
-                                    </div>
-                                </div>
-                                <ul class="campus-features">
-                                    <li><i class="fas fa-check-circle"></i><span>Router empresarial administrable y switches PoE administrables.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Access Points WiFi 6 de alto rendimiento con cobertura total.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Conversores de fibra óptica, módulos SFP y enlaces de fibra.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Instalación física, configuración y pruebas de conectividad.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Red segmentada: administración, docentes, estudiantes e invitados.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Portal cautivo institucional para autenticación de usuarios.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Monitoreo, administración, firmware y soporte técnico remoto.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Diagnóstico de fallas y revisión preventiva anual incluidos.</span></li>
-                                    <li><i class="fas fa-check-circle"></i><span>Vigencia de propuesta: 15 días naturales a partir de su emisión.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="campus-aside campus-aside-univ">
-                                <h3>Inversión todo incluido</h3>
-                                <p>Un solo pago mensual que cubre infraestructura, instalación, monitoreo y soporte. Sin sorpresas ni costos ocultos.</p>
-                                <div class="univ-price-highlight">
-                                    <span class="univ-price-tag">$2,200</span>
-                                    <span class="univ-price-unit">MXN / mes + IVA</span>
-                                    <span class="univ-price-contract">Contrato 36 meses</span>
-                                </div>
-                                <ul class="campus-points">
-                                    <li><i class="fas fa-circle"></i><span>Hardware incluido sin costo inicial</span></li>
-                                    <li><i class="fas fa-circle"></i><span>Instalación y configuración incluidas</span></li>
-                                    <li><i class="fas fa-circle"></i><span>Soporte técnico especializado</span></li>
-                                </ul>
-                                <a href="contacto.html" class="btn-primary campus-cta campus-cta-univ">Quiero esta propuesta para mi universidad</a>
-                            </aside>
-                        </div>
-                    </div>
-
-                </div><!-- /sliderC -->
-
-                <button class="slider-btn next" id="sc-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="slider-dots" id="dotsC"></div>
-
+      <div class="container" style="max-width: 1400px; margin: 0 auto">
+        <!-- Título de sección -->
+        <div class="campus-section-header">
+          <h2>Soluciones diseñadas para instituciones educativas</h2>
+          <p>
+            Tecnología administrada, conectividad estable y seguridad
+            inteligente para colegios y universidades que quieren crecer sin
+            complicaciones.
+          </p>
         </div>
+
+        <!-- Slider campus: misma estructura que los de arriba -->
+        <div class="slider-container" style="max-width: 1160px">
+          <button class="slider-btn prev" id="sc-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="slider-wrapper" id="sliderC">
+            <!-- SLIDE 1: Colegios -->
+            <div class="slideC active">
+              <div class="campus-highlight-card">
+                <div class="campus-main">
+                  <span class="campus-badge"
+                    ><i class="fas fa-school"></i> Campus Inteligente
+                    Administrado</span
+                  >
+                  <h2>
+                    Moderniza tu colegio sin reemplazar toda tu infraestructura
+                  </h2>
+                  <p class="lead">
+                    Paquete diseñado para colegios privados que necesitan
+                    tecnología actual, operación estable y costos controlados.
+                    Pago mensual accesible, soporte continuo y resultados
+                    visibles desde la primera etapa.
+                  </p>
+                  <ul class="campus-features">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Migración de equipos a sistema moderno (fin del soporte
+                        de Windows 10).</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Administración de red para operación estable y
+                        monitoreada.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Wi-Fi de última generación (Wi-Fi 6/7 según
+                        proyecto).</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Video vigilancia inteligente para protección y
+                        control.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Control de acceso para áreas clave del plantel.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span>Soporte continuo con atención especializada.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Capacitación incluida para tu equipo operativo y
+                        académico.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Modernizamos laboratorios de cómputo sin reemplazar
+                        todo.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Tecnología funcionando sin complicaciones, con
+                        mensualidad accesible.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="campus-aside">
+                  <h3>Listo para vender y ejecutar</h3>
+                  <p>
+                    Paquete completo para que tu equipo de marketing y
+                    programadores lo implemente como oferta principal.
+                  </p>
+                  <ul class="campus-points">
+                    <li>
+                      <i class="fas fa-circle"></i
+                      ><span>Sin inversión inicial elevada</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i
+                      ><span>Continuidad académica garantizada</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i
+                      ><span>Escalable por fases</span>
+                    </li>
+                  </ul>
+                  <a href="contacto.html" class="btn-primary campus-cta"
+                    >Quiero un diagnóstico para mi colegio</a
+                  >
+                </aside>
+              </div>
+            </div>
+
+            <!-- SLIDE 2: Universidades -->
+            <div class="slideC">
+              <div class="campus-highlight-card campus-univ">
+                <div class="campus-main">
+                  <span class="campus-badge campus-badge-univ"
+                    ><i class="fas fa-university"></i> Servicio Administrado de
+                    Red</span
+                  >
+                  <h2>
+                    Infraestructura de Conectividad y WiFi para tu universidad
+                  </h2>
+                  <p class="lead">
+                    Red moderna, segura y administrada para ofrecer conectividad
+                    estable y WiFi de alto rendimiento. Operación garantizada
+                    durante eventos y reuniones institucionales.
+                  </p>
+                  <div class="univ-capacity-row">
+                    <div class="univ-capacity-item">
+                      <span class="univ-capacity-num">300</span>
+                      <span class="univ-capacity-label"
+                        >usuarios simultáneos<em>Auditorio principal</em></span
+                      >
+                    </div>
+                    <div class="univ-capacity-divider"></div>
+                    <div class="univ-capacity-item">
+                      <span class="univ-capacity-num">50</span>
+                      <span class="univ-capacity-label"
+                        >usuarios simultáneos<em>Sala de juntas</em></span
+                      >
+                    </div>
+                  </div>
+                  <ul class="campus-features">
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Router empresarial administrable y switches PoE
+                        administrables.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Access Points WiFi 6 de alto rendimiento con cobertura
+                        total.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Conversores de fibra óptica, módulos SFP y enlaces de
+                        fibra.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Instalación física, configuración y pruebas de
+                        conectividad.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Red segmentada: administración, docentes, estudiantes e
+                        invitados.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Portal cautivo institucional para autenticación de
+                        usuarios.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Monitoreo, administración, firmware y soporte técnico
+                        remoto.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Diagnóstico de fallas y revisión preventiva anual
+                        incluidos.</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i
+                      ><span
+                        >Vigencia de propuesta: 15 días naturales a partir de su
+                        emisión.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <aside class="campus-aside campus-aside-univ">
+                  <h3>Inversión todo incluido</h3>
+                  <p>
+                    Un solo pago mensual que cubre infraestructura, instalación,
+                    monitoreo y soporte. Sin sorpresas ni costos ocultos.
+                  </p>
+                  <div class="univ-price-highlight">
+                    <span class="univ-price-tag">Desde $2,200</span>
+                    <span class="univ-price-unit">MXN / mes + IVA</span>
+                    <span class="univ-price-contract">Contrato 36 meses</span>
+                  </div>
+                  <ul class="campus-points">
+                    <li>
+                      <i class="fas fa-circle"></i
+                      ><span>Hardware incluido sin costo inicial</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i
+                      ><span>Instalación y configuración incluidas</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle"></i
+                      ><span>Soporte técnico especializado</span>
+                    </li>
+                  </ul>
+                  <a
+                    href="contacto.html"
+                    class="btn-primary campus-cta campus-cta-univ"
+                    >Quiero esta propuesta para mi universidad</a
+                  >
+                </aside>
+              </div>
+            </div>
+          </div>
+          <!-- /sliderC -->
+
+          <button class="slider-btn next" id="sc-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="slider-dots" id="dotsC"></div>
+      </div>
     </section>
 
     <!-- Chat flotante -->
     <div class="custom-chat-trigger" id="chat-trigger">
-        <div class="chat-icon-wrapper">
-            <i class="fas fa-comment-dots"></i>
-            <span class="chat-pulse"></span>
-        </div>
+      <div class="chat-icon-wrapper">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-pulse"></span>
+      </div>
     </div>
 
     <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <img src="src/logo.png" alt="CNS">
-                <p>Soluciones tecnológicas integrales para empresas en crecimiento.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Enlaces Rápidos</h4>
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="partners.html">Partners</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-            <div class="footer-links">
-                <h4>Contacto</h4>
-                <a href="tel:+525512345678"><i class="fas fa-phone"></i> +52 (55) 1234 5678</a>
-                <a href="mailto:contacto@callinetsys.com"><i class="fas fa-envelope"></i> contacto@callinetsys.com</a>
-                <a href="https://maps.app.goo.gl/GurRgNm7VndYgKfi8" target="_blank"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="src/logo.png" alt="CNS" />
+          <p>
+            Soluciones tecnológicas integrales para empresas en crecimiento.
+          </p>
         </div>
-        <div class="footer-bottom">© 2026 Callinetsys México. Todos los derechos reservados.</div>
+        <div class="footer-links">
+          <h4>Enlaces Rápidos</h4>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="partners.html">Partners</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <!-- Reemplaza el bloque footer-links de Contacto con este: -->
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <a href="tel:+525512345678"
+            ><i class="fas fa-phone"></i> +52 (55) 1234 5678</a
+          >
+          <a href="mailto:contacto@callinetsys.com"
+            ><i class="fas fa-envelope"></i> contacto@callinetsys.com</a
+          >
+          <a href="#"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100082962064998"
+            target="_blank"
+            rel="noopener"
+            ><i class="fab fa-facebook-f"></i> Facebook</a
+          >
+          <a
+            href="https://www.instagram.com/callinetsys?igsh=eXNqOTd6dHQ5Z21m"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Callinetsys México. Todos los derechos reservados.
+      </div>
     </footer>
 
     <script src="servicios.js"></script>
     <script src="chatbot.js"></script>
-</body>
+  </body>
 </html>

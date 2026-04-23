@@ -1852,4 +1852,10 @@ span[tabindex]:focus-visible {
     .nosotros-card { padding: 30px 24px; }
     .nosotros-card h2 { font-size: 1.6rem; }
     .especializacion-text h3 { font-size: 1.5rem; }
-}   
+}
+.footer-links a[href*="facebook"]:hover {
+  color: #1877f2;
+}
+.footer-links a[href*="instagram"]:hover {
+  color: #e1306c;   
+}

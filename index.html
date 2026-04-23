@@ -1,366 +1,577 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Callinetsys México | Integrador de Tecnología</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo">
-                <span class="logo-text">CALLINETSYS</span>
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">INICIO</a></li>
-            <li><a href="nosotros.html">NOSOTROS</a></li>
-            <li><a href="servicios.html">SERVICIOS</a></li>
-            <li><a href="partners.html">PARTNERS</a></li>
-            <li class="mobile-only"><a href="contacto.html" class="btn-nav-mobile">Contáctanos</a></li>
-        </ul>
-        <div class="nav-actions">
-            <a href="contacto.html" class="btn-nav">Contáctanos</a>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="nav-overlay" id="nav-overlay"></div>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="src/logo.png" alt="Callinetsys Logo" class="nav-logo" />
+          <span class="logo-text">CALLINETSYS</span>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+        <li><a href="servicios.html">SERVICIOS</a></li>
+        <li><a href="partners.html">PARTNERS</a></li>
+        <li class="mobile-only">
+          <a href="contacto.html" class="btn-nav-mobile">Contáctanos</a>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contacto.html" class="btn-nav">Contáctanos</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-overlay" id="nav-overlay"></div>
     </nav>
 
     <section class="featured-scroll-section">
-        <div class="featured-scroll-container">
-            <div class="featured-scroll-track">
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/fibra.webp" alt="Instalación de cable de fibra óptica">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Conectividad empresarial</span>
-                        <h2>Cableado Estructurado UTP y Fibra Óptica Certificado</h2>
-                        <p>Diseñamos e instalamos soluciones de cableado estructurado UTP y fibra óptica certificadas para alto rendimiento. Infraestructura robusta, ordenada y escalable que garantiza la base sólida que toda red empresarial o educativa necesita para operar sin fallas.</p>
-                        <a href="servicios.html?slide2=0" class="btn-primary">Más información</a>
-                    </div>
-                </article>
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/wifi.webp" alt="Internet 7">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Disponibilidad continua</span>
-                        <h2>Internet 7</h2>
-                        <p>Conectividad confiable con cobertura especializada, monitoreo continuo 24/7 y soporte técnico dedicado. Diseñado para organizaciones donde cada minuto sin conexión representa una pérdida real de productividad.</p>
-                        <a href="servicios.html?slide2=1" class="btn-primary">Más información</a>
-                    </div>
-                </article>
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/engranes.jpg" alt="Infraestructura digital administrada para colegios">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Transformación escolar</span>
-                        <h2>Modernización sin reemplazar todo</h2>
-                        <p>Tus equipos actuales pueden seguir funcionando con tecnología moderna. Migramos, actualizamos y administramos tu infraestructura por una mensualidad accesible, sin necesidad de una inversión millonaria ni ampliar tu equipo de TI.</p>
-                        <a href="contacto.html" class="btn-primary">Solicitar diagnóstico</a>
-                    </div>
-                </article>
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/crecimiento.png" alt="Modernización con presupuesto limitado">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Modelo accesible</span>
-                        <h2>Modernización con presupuesto controlado</h2>
-                        <p>Tecnología de punta para colegios privados sin desembolso inicial elevado. Optimizamos tus recursos existentes y operamos todo bajo un esquema de pago mensual fijo, predecible y sin sorpresas en el presupuesto.</p>
-                        <a href="servicios.html?slide2=3" class="btn-primary">Más información</a>
-                    </div>
-                </article>
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/ruta.webp" alt="Red escolar inestable">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Rendimiento de red</span>
-                        <h2>Wi-Fi estable para continuidad académica</h2>
-                        <p>Cuando el Wi-Fi falla, todo el colegio se detiene. Implementamos redes Wi-Fi 6/7 modernas y administradas con cobertura total en aulas, laboratorios y zonas comunes, para garantizar clases y operación sin interrupciones.</p>
-                        <a href="contacto.html" class="btn-primary">Agenda tu diagnóstico</a>
-                    </div>
-                </article>
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/centromando.webp" alt="Seguridad escolar administrada">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Protección 360</span>
-                        <h2>Seguridad escolar inteligente</h2>
-                        <p>Videovigilancia inteligente, control de acceso y red segura en un solo paquete administrado. Protege a tu comunidad educativa con tecnología avanzada sin inversión inicial elevada ni complicaciones técnicas para tu institución.</p>
-                        <a href="servicios.html?slide2=5" class="btn-primary">Más información</a>
-                    </div>
-                </article>
-                <article class="featured-item">
-                    <div class="featured-item-image">
-                        <img src="src/nube.jpg" alt="Modelo integral de infraestructura administrada">
-                    </div>
-                    <div class="featured-item-content">
-                        <span class="featured-kicker">Servicio integral</span>
-                        <h2>Colegio Digital Accesible 360</h2>
-                        <p>Red, sistemas, Wi-Fi y seguridad en un solo servicio administrado por mensualidad fija. Soporte continuo, crecimiento por fases y un solo proveedor responsable de toda tu infraestructura tecnológica escolar.</p>
-                        <a href="servicios.html?slide2=6" class="btn-primary">Más información</a>
-                    </div>
-                </article>
+      <div class="featured-scroll-container">
+        <div class="featured-scroll-track">
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img
+                src="src/fibra.webp"
+                alt="Instalación de cable de fibra óptica"
+              />
             </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Conectividad empresarial</span>
+              <h2>Cableado Estructurado UTP y Fibra Óptica Certificado</h2>
+              <p>
+                Diseñamos e instalamos soluciones de cableado estructurado UTP y
+                fibra óptica certificadas para alto rendimiento. Infraestructura
+                robusta, ordenada y escalable que garantiza la base sólida que
+                toda red empresarial o educativa necesita para operar sin
+                fallas.
+              </p>
+              <a href="servicios.html?slide2=0" class="btn-primary"
+                >Más información</a
+              >
+            </div>
+          </article>
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img src="src/wifi.webp" alt="Internet 7" />
+            </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Disponibilidad continua</span>
+              <h2>Internet 7</h2>
+              <p>
+                Conectividad confiable con cobertura especializada, monitoreo
+                continuo 24/7 y soporte técnico dedicado. Diseñado para
+                organizaciones donde cada minuto sin conexión representa una
+                pérdida real de productividad.
+              </p>
+              <a href="servicios.html?slide2=1" class="btn-primary"
+                >Más información</a
+              >
+            </div>
+          </article>
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img
+                src="src/engranes.jpg"
+                alt="Infraestructura digital administrada para colegios"
+              />
+            </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Transformación escolar</span>
+              <h2>Modernización sin reemplazar todo</h2>
+              <p>
+                Tus equipos actuales pueden seguir funcionando con tecnología
+                moderna. Migramos, actualizamos y administramos tu
+                infraestructura por una mensualidad accesible, sin necesidad de
+                una inversión millonaria ni ampliar tu equipo de TI.
+              </p>
+              <a href="contacto.html" class="btn-primary"
+                >Solicitar diagnóstico</a
+              >
+            </div>
+          </article>
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img
+                src="src/crecimiento.png"
+                alt="Modernización con presupuesto limitado"
+              />
+            </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Modelo accesible</span>
+              <h2>Modernización con presupuesto controlado</h2>
+              <p>
+                Tecnología de punta para colegios privados sin desembolso
+                inicial elevado. Optimizamos tus recursos existentes y operamos
+                todo bajo un esquema de pago mensual fijo, predecible y sin
+                sorpresas en el presupuesto.
+              </p>
+              <a href="servicios.html?slide2=3" class="btn-primary"
+                >Más información</a
+              >
+            </div>
+          </article>
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img src="src/ruta.webp" alt="Red escolar inestable" />
+            </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Rendimiento de red</span>
+              <h2>Wi-Fi estable para continuidad académica</h2>
+              <p>
+                Cuando el Wi-Fi falla, todo el colegio se detiene. Implementamos
+                redes Wi-Fi 6/7 modernas y administradas con cobertura total en
+                aulas, laboratorios y zonas comunes, para garantizar clases y
+                operación sin interrupciones.
+              </p>
+              <a href="contacto.html" class="btn-primary"
+                >Agenda tu diagnóstico</a
+              >
+            </div>
+          </article>
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img
+                src="src/centromando.webp"
+                alt="Seguridad escolar administrada"
+              />
+            </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Protección 360</span>
+              <h2>Seguridad escolar inteligente</h2>
+              <p>
+                Videovigilancia inteligente, control de acceso y red segura en
+                un solo paquete administrado. Protege a tu comunidad educativa
+                con tecnología avanzada sin inversión inicial elevada ni
+                complicaciones técnicas para tu institución.
+              </p>
+              <a href="servicios.html?slide2=5" class="btn-primary"
+                >Más información</a
+              >
+            </div>
+          </article>
+          <article class="featured-item">
+            <div class="featured-item-image">
+              <img
+                src="src/nube.jpg"
+                alt="Modelo integral de infraestructura administrada"
+              />
+            </div>
+            <div class="featured-item-content">
+              <span class="featured-kicker">Servicio integral</span>
+              <h2>Colegio Digital Accesible 360</h2>
+              <p>
+                Red, sistemas, Wi-Fi y seguridad en un solo servicio
+                administrado por mensualidad fija. Soporte continuo, crecimiento
+                por fases y un solo proveedor responsable de toda tu
+                infraestructura tecnológica escolar.
+              </p>
+              <a href="servicios.html?slide2=6" class="btn-primary"
+                >Más información</a
+              >
+            </div>
+          </article>
         </div>
-        <button class="featured-nav prev" id="featured-prev" aria-label="Ver slide anterior">
-            <i class="fas fa-chevron-left" aria-hidden="true"></i>
-        </button>
-        <button class="featured-nav next" id="featured-next" aria-label="Ver siguiente slide">
-            <i class="fas fa-chevron-right" aria-hidden="true"></i>
-        </button>
+      </div>
+      <button
+        class="featured-nav prev"
+        id="featured-prev"
+        aria-label="Ver slide anterior"
+      >
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button
+        class="featured-nav next"
+        id="featured-next"
+        aria-label="Ver siguiente slide"
+      >
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
     </section>
 
     <header class="hero" id="inicio">
-        <div class="hero-container">
-            <div class="hero-text">
-                <h1 class="hero-title">CALLINETSYS</h1>
-                <h2 class="hero-subtitle">Tecnología de <span class="text-green">Vanguardia</span></h2>
-                <p class="hero-description">Soluciones integrales bajo la dirección del Ing. Fernando Ramírez desde el año 2000.</p>
-                <div class="hero-btns">
-                    <a href="#nosotros" class="btn-primary">Nuestra Historia</a>
-                    <a href="servicios.html" class="btn-secondary">Servicios</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="circle-container">
-                    <div class="shape circle-blue"></div>
-                    <div class="shape circle-red"></div>
-                    <div class="shape circle-green"></div>
-                    <div class="shape circle-black"></div>
-                </div>
-            </div>
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1 class="hero-title">CALLINETSYS</h1>
+          <h2 class="hero-subtitle">
+            Tecnología de <span class="text-green">Vanguardia</span>
+          </h2>
+          <p class="hero-description">
+            Empresa mexicana de tecnología fundada en el año 2000, especializada
+            en integración de soluciones TI para empresas e instituciones
+            educativas.
+          </p>
+          <div class="hero-btns">
+            <a href="#nosotros" class="btn-primary">Nuestra Historia</a>
+            <a href="servicios.html" class="btn-secondary">Servicios</a>
+          </div>
         </div>
+        <div class="hero-visual">
+          <div class="circle-container">
+            <div class="shape circle-blue"></div>
+            <div class="shape circle-red"></div>
+            <div class="shape circle-green"></div>
+            <div class="shape circle-black"></div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Servicios Especializados -->
     <section class="main-content" id="areas">
-        <div class="container">
-            <h2 class="section-header">Servicios Especializados</h2>
-            <div class="card-wrapper">
-                <div class="pro-card">
-                    <div class="card-image-container">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500" alt="Azure">
-                    </div>
-                    <div class="pro-content">
-                        <h3>Áreas de actividad</h3>
-                        <p>Líder en MICROSOFT AZURE, OFFICE 365, Voz, Datos y Seguridad.</p>
-                        <a href="servicios.html">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="card-image-container">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500" alt="Alianzas">
-                    </div>
-                    <div class="pro-content">
-                        <h3>Alianzas Estratégicas</h3>
-                        <p>Partners oficiales de líderes mundiales en software y hardware.</p>
-                        <a href="partners.html">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="card-image-container">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500" alt="Clientes">
-                    </div>
-                    <div class="pro-content">
-                        <h3>Clientes</h3>
-                        <p>ISSSTE, EDITORIAL TRILLAS, HERMES MUSIC y SIES.</p>
-                        <a href="nosotros.html">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-header">Servicios Especializados</h2>
+        <div class="card-wrapper">
+          <div class="pro-card">
+            <div class="card-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500"
+                alt="Azure"
+              />
             </div>
+            <div class="pro-content">
+              <h3>Áreas de actividad</h3>
+              <p>
+                Líderes en <strong>Microsoft Azure</strong>, Office 365,
+                soluciones de Voz IP, infraestructura de Datos y Seguridad
+                informática. Más de 25 años implementando tecnología empresarial
+                con resultados comprobados.
+              </p>
+              <a href="servicios.html"
+                >Ver más <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="pro-card">
+            <div class="card-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500"
+                alt="Alianzas"
+              />
+            </div>
+            <div class="pro-content">
+              <h3>Alianzas Estratégicas</h3>
+              <p>
+                Partners oficiales de Microsoft, Cisco, Oracle, SAP, Apple,
+                Huawei, Ruijie y Hikvision. Acceso directo a soporte técnico,
+                licenciamiento preferencial y capacitación certificada.
+              </p>
+              <a href="partners.html"
+                >Ver más <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="pro-card">
+            <div class="card-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500"
+                alt="Clientes"
+              />
+            </div>
+            <div class="pro-content">
+              <h3>Clientes</h3>
+              <p>
+                Empresas e instituciones que confían en Callinetsys:
+                <strong>ISSSTE</strong>, <strong>Editorial Trillas</strong>,
+                <strong>Hermes Music</strong> y <strong>SIES</strong>, entre
+                otros. Soluciones a la medida para sectores gobierno, educativo
+                y empresarial.
+              </p>
+              <a href="nosotros.html"
+                >Ver más <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Banner Apple -->
     <section class="apple-banner">
-        <div class="apple-banner-inner">
-            <div class="apple-banner-left">
-                <div class="apple-banner-icon">
-                    <i class="fab fa-apple"></i>
-                </div>
-                <div class="apple-banner-label-wrap">
-                    <span class="apple-banner-eyebrow">Distribuidores Oficiales</span>
-                    <h2 class="apple-banner-title">El ecosistema Apple,<br>ahora en manos expertas.</h2>
-                </div>
-            </div>
-            <div class="apple-banner-right">
-                <p class="apple-banner-desc">Mac, iPad, iPhone y soluciones Apple Business Manager — implementados, configurados y respaldados por Callinetsys con soporte especializado y garantía oficial en México. La potencia de Apple con la confianza de 25 años de experiencia tecnológica.</p>
-                <div class="apple-banner-actions">
-                    <a href="contacto.html" class="apple-banner-cta-primary">
-                        Solicitar información <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="partners.html" class="apple-banner-cta-secondary">
-                        Ver alianzas
-                    </a>
-                </div>
-            </div>
+      <div class="apple-banner-inner">
+        <div class="apple-banner-left">
+          <div class="apple-banner-icon">
+            <i class="fab fa-apple"></i>
+          </div>
+          <div class="apple-banner-label-wrap">
+            <span class="apple-banner-eyebrow">Distribuidores Oficiales</span>
+            <h2 class="apple-banner-title">
+              El ecosistema Apple,<br />ahora en manos expertas.
+            </h2>
+          </div>
         </div>
+        <div class="apple-banner-right">
+          <p class="apple-banner-desc">
+            Mac, iPad, iPhone y soluciones Apple Business Manager —
+            implementados, configurados y respaldados por Callinetsys con
+            soporte especializado y garantía oficial en México. La potencia de
+            Apple con la confianza de 25 años de experiencia tecnológica.
+          </p>
+          <div class="apple-banner-actions">
+            <a href="contacto.html" class="apple-banner-cta-primary">
+              Solicitar información <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="partners.html" class="apple-banner-cta-secondary">
+              Ver alianzas
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- IDA 360 -->
     <section class="ida-articles-section" id="articulos-ida">
-        <div class="ida-articles-container">
-            <h2 class="section-header">Infraestructura Digital Administrada 360</h2>
-            <p class="ida-intro">
-                Moderniza tu colegio con un modelo administrado por mensualidad accesible: red, sistemas, Wi-Fi y seguridad con operación continua.
+      <div class="ida-articles-container">
+        <h2 class="section-header">Infraestructura Digital Administrada 360</h2>
+        <p class="ida-intro">
+          Moderniza tu colegio con un modelo administrado por mensualidad
+          accesible: red, sistemas, Wi-Fi y seguridad con operación continua.
+        </p>
+        <div class="ida-articles-grid">
+          <article class="ida-article-card reveal">
+            <h3>El problema actual</h3>
+            <p>
+              Muchos colegios privados operan con equipos limitados, redes
+              inestables y soporte intermitente.
             </p>
-            <div class="ida-articles-grid">
-                <article class="ida-article-card reveal">
-                    <h3>El problema actual</h3>
-                    <p>Muchos colegios privados operan con equipos limitados, redes inestables y soporte intermitente.</p>
-                    <button class="btn-secondary ida-toggle-btn" data-target="ida-problema" aria-expanded="false">Ver más</button>
-                    <div class="ida-more-content" id="ida-problema" hidden>
-                        <p>Hay laboratorios que ya no soportan nuevas versiones del sistema operativo, licenciamiento costoso y presupuestos restringidos para renovar infraestructura completa.</p>
-                    </div>
-                </article>
-                <article class="ida-article-card reveal">
-                    <h3>La solución IDA 360</h3>
-                    <p>Colegio Digital Accesible 360 permite modernizar sin hacer una inversión millonaria inicial.</p>
-                    <button class="btn-secondary ida-toggle-btn" data-target="ida-solucion" aria-expanded="false">Ver más</button>
-                    <div class="ida-more-content" id="ida-solucion" hidden>
-                        <p>Implementamos infraestructura administrada con contrato por mensualidad fija para continuidad académica y tecnológica, sin aumentar tu plantilla de TI.</p>
-                    </div>
-                </article>
-                <article class="ida-article-card reveal">
-                    <h3>Plan Base</h3>
-                    <p>Primera fase para estabilizar operación y modernizar el entorno principal del colegio.</p>
-                    <button class="btn-secondary ida-toggle-btn" data-target="ida-base" aria-expanded="false">Ver más</button>
-                    <div class="ida-more-content" id="ida-base" hidden>
-                        <p>Incluye migración de sistemas, entorno ofimático moderno, optimización de red, seguridad básica y soporte remoto continuo.</p>
-                    </div>
-                </article>
-                <article class="ida-article-card reveal">
-                    <h3>Plan Campus</h3>
-                    <p>Escalamiento para un campus inteligente con administración centralizada y monitoreo.</p>
-                    <button class="btn-secondary ida-toggle-btn" data-target="ida-campus" aria-expanded="false">Ver más</button>
-                    <div class="ida-more-content" id="ida-campus" hidden>
-                        <p>Integra Wi-Fi 6 o Wi-Fi 7 según proyecto, videovigilancia inteligente, control de acceso y monitoreo preventivo para toda la operación escolar.</p>
-                    </div>
-                </article>
-                <article class="ida-article-card reveal">
-                    <h3>Beneficios clave</h3>
-                    <p>Un modelo pensado para crecer por fases y mantener control total del presupuesto.</p>
-                    <button class="btn-secondary ida-toggle-btn" data-target="ida-beneficios" aria-expanded="false">Ver más</button>
-                    <div class="ida-more-content" id="ida-beneficios" hidden>
-                        <p>Obtienes presupuesto predecible, soporte permanente, modernización gradual y continuidad académica para el próximo ciclo escolar.</p>
-                    </div>
-                </article>
+            <button
+              class="btn-secondary ida-toggle-btn"
+              data-target="ida-problema"
+              aria-expanded="false"
+            >
+              Ver más
+            </button>
+            <div class="ida-more-content" id="ida-problema" hidden>
+              <p>
+                Hay laboratorios que ya no soportan nuevas versiones del sistema
+                operativo, licenciamiento costoso y presupuestos restringidos
+                para renovar infraestructura completa.
+              </p>
             </div>
+          </article>
+          <article class="ida-article-card reveal">
+            <h3>La solución IDA 360</h3>
+            <p>
+              Colegio Digital Accesible 360 permite modernizar sin hacer una
+              inversión millonaria inicial.
+            </p>
+            <button
+              class="btn-secondary ida-toggle-btn"
+              data-target="ida-solucion"
+              aria-expanded="false"
+            >
+              Ver más
+            </button>
+            <div class="ida-more-content" id="ida-solucion" hidden>
+              <p>
+                Implementamos infraestructura administrada con contrato por
+                mensualidad fija para continuidad académica y tecnológica, sin
+                aumentar tu plantilla de TI.
+              </p>
+            </div>
+          </article>
+          <article class="ida-article-card reveal">
+            <h3>Plan Base</h3>
+            <p>
+              Primera fase para estabilizar operación y modernizar el entorno
+              principal del colegio.
+            </p>
+            <button
+              class="btn-secondary ida-toggle-btn"
+              data-target="ida-base"
+              aria-expanded="false"
+            >
+              Ver más
+            </button>
+            <div class="ida-more-content" id="ida-base" hidden>
+              <p>
+                Incluye migración de sistemas, entorno ofimático moderno,
+                optimización de red, seguridad básica y soporte remoto continuo.
+              </p>
+            </div>
+          </article>
+          <article class="ida-article-card reveal">
+            <h3>Plan Campus</h3>
+            <p>
+              Escalamiento para un campus inteligente con administración
+              centralizada y monitoreo.
+            </p>
+            <button
+              class="btn-secondary ida-toggle-btn"
+              data-target="ida-campus"
+              aria-expanded="false"
+            >
+              Ver más
+            </button>
+            <div class="ida-more-content" id="ida-campus" hidden>
+              <p>
+                Integra Wi-Fi 6 o Wi-Fi 7 según proyecto, videovigilancia
+                inteligente, control de acceso y monitoreo preventivo para toda
+                la operación escolar.
+              </p>
+            </div>
+          </article>
+          <article class="ida-article-card reveal">
+            <h3>Beneficios clave</h3>
+            <p>
+              Un modelo pensado para crecer por fases y mantener control total
+              del presupuesto.
+            </p>
+            <button
+              class="btn-secondary ida-toggle-btn"
+              data-target="ida-beneficios"
+              aria-expanded="false"
+            >
+              Ver más
+            </button>
+            <div class="ida-more-content" id="ida-beneficios" hidden>
+              <p>
+                Obtienes presupuesto predecible, soporte permanente,
+                modernización gradual y continuidad académica para el próximo
+                ciclo escolar.
+              </p>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
     <section class="about-section" id="nosotros">
-        <div class="about-container">
-            <div class="about-text">
-                <span class="tag">Trayectoria</span>
-                <h2>Nuestra Historia</h2>
-                <div class="history-content">
-                    <p><strong>CALLINETSYS</strong> es una empresa mexicana que nace en el año 2000, bajo la dirección del <strong>Ingeniero Fernando Ramírez</strong>.</p>
-                    <p>Nuestras oficinas se ubican estratégicamente en la <strong>Colonia Narvarte</strong> (CDMX) e <strong>Ixmiquilpan</strong>.</p>
-                    <p>Estamos dedicados a integrar e implementar soluciones avanzadas, siendo socios de negocios de los líderes del mercado.</p>
-                </div>
+      <div class="about-container">
+        <div class="about-text">
+          <span class="tag">Trayectoria</span>
+          <h2>Nuestra Historia</h2>
+          <div class="history-content">
+            <p>
+              <strong>CALLINETSYS</strong> es una organización mexicana fundada
+              en el año 2000. Desde sus inicios, se ha consolidado como un
+              referente tecnológico bajo una
+              <strong>dirección institucional sólida</strong> y un equipo de
+              profesionales comprometidos con la excelencia.
+            </p>
+            <p>
+              Nuestras oficinas se ubican estratégicamente en la
+              <strong>Colonia Narvarte</strong> (CDMX) e
+              <strong>Ixmiquilpan</strong>.
+            </p>
+            <p>
+              Estamos dedicados a integrar e implementar soluciones avanzadas,
+              siendo socios de negocios de los líderes del mercado.
+            </p>
+          </div>
 
-                <h3 class="mini-title">Nuestros Socios</h3>
-                <div class="partners-tags">
-                    <span onclick="cambiarLogo('msft')">
-                        Microsoft
-                    </span>
-                    <span onclick="cambiarLogo('cisco')">
-                        Cisco
-                    </span>
-                    <span onclick="cambiarLogo('oracle')">
-                        Oracle
-                    </span>
-                    <span onclick="cambiarLogo('sap')">
-                        SAP
-                    </span>
-                    <span onclick="cambiarLogo('open')">
-                        Open Source
-                    </span>
-                    <span onclick="cambiarLogo('ruijie')">
-                        Ruijie Network
-                    </span>
-                    <span onclick="cambiarLogo('huawei')">
-                        Huawei
-                    </span>
-                    <span onclick="cambiarLogo('hikvision')">
-                        Hikvision
-                    </span>
-
-                    <!-- Apple — manejado por script.js vía id="tag-apple" -->
-                    <div class="apple-tag-wrapper" id="tag-apple">
-                        <span class="apple-tag-inner">
-                            Apple
-                        </span>
-                    </div>
-                </div>
-
-                <a href="nosotros.html" class="btn-primary" style="margin-top: 30px; display: inline-block;">
-                    Conoce más sobre nosotros
-                </a>
+          <h3 class="mini-title">Nuestros Socios</h3>
+          <div class="partners-tags">
+            <span onclick="cambiarLogo('msft')">Microsoft</span>
+            <span onclick="cambiarLogo('cisco')">Cisco</span>
+            <span onclick="cambiarLogo('oracle')">Oracle</span>
+            <span onclick="cambiarLogo('sap')">SAP</span>
+            <span onclick="cambiarLogo('open')">Open Source</span>
+            <span onclick="cambiarLogo('ruijie')">Ruijie Network</span>
+            <span onclick="cambiarLogo('huawei')">Huawei</span>
+            <span onclick="cambiarLogo('hikvision')">Hikvision</span>
+            <span onclick="cambiarLogo('lenovo')">Lenovo</span>
+            <span onclick="cambiarLogo('dell')">Dell</span>
+            <span onclick="cambiarLogo('hp')">HP</span>
+            <span onclick="cambiarLogo('ubiquiti')">Ubiquiti</span>
+            <div class="apple-tag-wrapper" id="tag-apple">
+              <span class="apple-tag-inner">Apple</span>
             </div>
-            <div class="about-visual">
-                <div class="logo-display-box">
-                    <img src="src/mtsf.png" id="display-logo" alt="Socio Callinetsys">
-                </div>
-                <div class="partner-info-box">
-                    <p id="partner-nombre" class="partner-info-nombre">Microsoft</p>
-                    <p id="partner-descripcion" class="partner-info-desc">Partner certificado Microsoft. Implementamos soluciones Azure, Office 365, Teams y Dynamics 365 para impulsar la productividad y transformación digital de tu empresa con tecnología en la nube.</p>
-                </div>
-            </div>
+          </div>
+
+          <a
+            href="nosotros.html"
+            class="btn-primary"
+            style="margin-top: 30px; display: inline-block"
+          >
+            Conoce más sobre nosotros
+          </a>
         </div>
+        <div class="about-visual">
+          <div class="logo-display-box">
+            <img src="src/mtsf.png" id="display-logo" alt="Socio Callinetsys" />
+          </div>
+          <div class="partner-info-box">
+            <p id="partner-nombre" class="partner-info-nombre">Microsoft</p>
+            <p id="partner-descripcion" class="partner-info-desc">
+              Partner certificado Microsoft. Implementamos soluciones Azure,
+              Office 365, Teams y Dynamics 365 para impulsar la productividad y
+              transformación digital de tu empresa con tecnología en la nube.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="custom-chat-trigger" id="chat-trigger">
-        <div class="chat-icon-wrapper">
-            <i class="fas fa-comment-dots"></i>
-            <span class="chat-pulse"></span>
-        </div>
+      <div class="chat-icon-wrapper">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-pulse"></span>
+      </div>
     </div>
 
     <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <img src="src/logo.png" alt="CNS">
-                <p>Soluciones tecnológicas integrales para empresas en crecimiento.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Enlaces Rápidos</h4>
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="partners.html">Partners</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-            <div class="footer-links">
-                <h4>Contacto</h4>
-                <a href="tel:+525512345678"><i class="fas fa-phone"></i> +52 (55) 1234 5678</a>
-                <a href="mailto:contacto@callinetsys.com"><i class="fas fa-envelope"></i> contacto@callinetsys.com</a>
-                <a href="#"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="src/logo.png" alt="CNS" />
+          <p>
+            Soluciones tecnológicas integrales para empresas en crecimiento.
+          </p>
         </div>
-        <div class="footer-bottom">
-            © 2026 Callinetsys México. Todos los derechos reservados.
+        <div class="footer-links">
+          <h4>Enlaces Rápidos</h4>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="partners.html">Partners</a>
+          <a href="contacto.html">Contacto</a>
         </div>
+        <!-- Reemplaza el bloque footer-links de Contacto con este: -->
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <a href="tel:+525512345678"
+            ><i class="fas fa-phone"></i> +52 (55) 1234 5678</a
+          >
+          <a href="mailto:contacto@callinetsys.com"
+            ><i class="fas fa-envelope"></i> contacto@callinetsys.com</a
+          >
+          <a href="#"><i class="fas fa-map-marker-alt"></i> Narvarte, CDMX</a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100082962064998"
+            target="_blank"
+            rel="noopener"
+            ><i class="fab fa-facebook-f"></i> Facebook</a
+          >
+          <a
+            href="https://www.instagram.com/callinetsys?igsh=eXNqOTd6dHQ5Z21m"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Callinetsys México. Todos los derechos reservados.
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="chatbot.js"></script>
-
-</body>
+  </body>
 </html>

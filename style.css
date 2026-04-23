@@ -450,6 +450,8 @@ img {
   font-weight: 800;
   color: var(--black);
   margin-bottom: 25px;
+   white-space: nowrap; /* agrega esta línea */
+  font-size: clamp(2rem, 4vw, 4rem); 
 }
 
 .text-green {
@@ -2804,4 +2806,14 @@ span[tabindex]:focus-visible {
   .apple-banner-desc {
     font-size: 0.9rem;
   }
+}
+/* Redes sociales en footer */
+.footer-links a[href*="facebook"]:hover {
+  color: #1877f2;
+}
+.footer-links a[href*="instagram"]:hover {
+  color: #e1306c;
+}
+.apple-tag-wrapper {
+  display: inline-flex;
 }

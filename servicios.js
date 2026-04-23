@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /* Auto-slide */
         function startAuto() {
-            autoInterval = setInterval(function () { goTo(current + 1); }, 5000);
+            autoInterval = setInterval(function () { goTo(current + 1); }, 12000);
         }
         function stopAuto() { clearInterval(autoInterval); }
 

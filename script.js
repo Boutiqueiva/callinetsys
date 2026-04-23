@@ -1,319 +1,408 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    /* =========================================
+document.addEventListener("DOMContentLoaded", function () {
+  /* =========================================
         1. SMART NAVBAR (Ocultar al bajar / Mostrar al subir)
        ========================================= */
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-    const scrollThreshold = 100;
-    const chatTrigger = document.getElementById('chat-trigger');
+  let lastScrollTop = 0;
+  const navbar = document.querySelector(".navbar");
+  const scrollThreshold = 100;
+  const chatTrigger = document.getElementById("chat-trigger");
 
-    if (navbar) {
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop < 0) scrollTop = 0;
+  if (navbar) {
+    window.addEventListener(
+      "scroll",
+      function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop < 0) scrollTop = 0;
 
-            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-                navbar.classList.add('navbar-hidden');
-            } else {
-                navbar.classList.remove('navbar-hidden');
-            }
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+          navbar.classList.add("navbar-hidden");
+        } else {
+          navbar.classList.remove("navbar-hidden");
+        }
 
-            if (scrollTop > 50) {
-                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.boxShadow = 'none';
-                navbar.style.background = 'rgba(255, 255, 255, 1)';
-            }
+        if (scrollTop > 50) {
+          navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+        } else {
+          navbar.style.boxShadow = "none";
+          navbar.style.background = "rgba(255, 255, 255, 1)";
+        }
 
-            if (chatTrigger) {
-                if (scrollTop > 180) {
-                    chatTrigger.classList.add('visible');
-                } else {
-                    chatTrigger.classList.remove('visible');
-                }
-            }
+        if (chatTrigger) {
+          if (scrollTop > 180) {
+            chatTrigger.classList.add("visible");
+          } else {
+            chatTrigger.classList.remove("visible");
+          }
+        }
 
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, { passive: true });
-    }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      },
+      { passive: true },
+    );
+  }
 
-
-    /* =========================================
+  /* =========================================
         2. MENÚ HAMBURGUESA (Móvil)
        ========================================= */
-    const menuToggle  = document.getElementById('hamburger');
-    const navMenu     = document.querySelector('.nav-links');
-    const navOverlay  = document.getElementById('nav-overlay');
-    const navLinksItems = document.querySelectorAll('.nav-links a');
+  const menuToggle = document.getElementById("hamburger");
+  const navMenu = document.querySelector(".nav-links");
+  const navOverlay = document.getElementById("nav-overlay");
+  const navLinksItems = document.querySelectorAll(".nav-links a");
 
-    function toggleMenu() {
-        if (!menuToggle || !navMenu || !navOverlay) return;
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-    }
+  function toggleMenu() {
+    if (!menuToggle || !navMenu || !navOverlay) return;
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+    document.body.style.overflow = navMenu.classList.contains("active")
+      ? "hidden"
+      : "";
+  }
 
-    if (menuToggle && navMenu && navOverlay) {
-        menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-        navOverlay.addEventListener('click', toggleMenu);
-    }
+  if (menuToggle && navMenu && navOverlay) {
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+    navOverlay.addEventListener("click", toggleMenu);
+  }
 
-    navLinksItems.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu && navMenu.classList.contains('active')) toggleMenu();
-        });
+  navLinksItems.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navMenu && navMenu.classList.contains("active")) toggleMenu();
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navMenu && navMenu.classList.contains("active"))
+      toggleMenu();
+  });
+
+  navMenu?.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  window.addEventListener("resize", () => {
+    if (
+      window.innerWidth > 768 &&
+      navMenu &&
+      navMenu.classList.contains("active")
+    )
+      toggleMenu();
+  });
+
+  /* =========================================
+      3. LÓGICA DE SOCIOS (PARTNERS) — CORREGIDO
+      ========================================= */
+  const datosSocios = {
+    msft: {
+      img: "src/mtsf.png",
+      nombre: "Microsoft",
+      descripcion:
+        "Partner certificado Microsoft. Implementamos soluciones Azure, Office 365, Teams y Dynamics 365 para impulsar la productividad y transformación digital de tu empresa con tecnología en la nube.",
+    },
+    cisco: {
+      img: "src/cisco.png",
+      nombre: "Cisco",
+      descripcion:
+        "Partner autorizado Cisco. Especialistas en diseño e implementación de redes empresariales, ciberseguridad, colaboración y conectividad de clase mundial para entornos críticos.",
+    },
+    oracle: {
+      img: "src/oracle.png",
+      nombre: "Oracle",
+      descripcion:
+        "Alianza con Oracle para la implementación y administración de bases de datos, ERP empresarial y soluciones en la nube que optimizan procesos y garantizan alta disponibilidad de datos.",
+    },
+    sap: {
+      img: "src/sap.png",
+      nombre: "SAP",
+      descripcion:
+        "Partner SAP especializado en la implementación de soluciones ERP, gestión financiera y cadena de suministro que integran y digitalizan todos los procesos clave del negocio.",
+    },
+    open: {
+      img: "src/open.png",
+      nombre: "Open Source",
+      descripcion:
+        "Implementamos soluciones basadas en tecnologías open source como Linux, Kubernetes, OpenStack y herramientas de desarrollo que reducen costos de licenciamiento sin sacrificar rendimiento.",
+    },
+    ruijie: {
+      img: "src/ruijid.webp",
+      nombre: "Ruijie Network",
+      descripcion:
+        "Distribuidor oficial Ruijie. Proveemos switches, routers y puntos de acceso Wi-Fi de alto rendimiento para redes empresariales y educativas con gestión centralizada en la nube.",
+    },
+    huawei: {
+      img: "src/huwa.png",
+      nombre: "Huawei",
+      descripcion:
+        "Partner Huawei para infraestructura de telecomunicaciones, redes 5G, soluciones de almacenamiento y equipos de red empresarial con tecnología de vanguardia a nivel mundial.",
+    },
+    hikvision: {
+      img: "src/hiki.webp",
+      nombre: "Hikvision",
+      descripcion:
+        "Distribuidor autorizado Hikvision, líder mundial en videovigilancia. Implementamos sistemas de cámaras IP, analítica de video inteligente y control de accesos para proteger tu empresa.",
+    },
+    apple: {
+      img: "src/apple.webp",
+      nombre: "Apple — Distribuidor Oficial",
+      descripcion:
+        "Somos distribuidores oficiales Apple en México. Equipamos empresas e instituciones con Mac, iPad, iPhone y Apple Business Manager con soporte experto y garantía oficial.",
+    },
+    // --- AQUÍ ESTABA EL FALLO, CORREGIDO ABAJO ---
+    lenovo: {
+      img: "src/levono-logo.webp", // Antes decía src
+      nombre: "Lenovo",
+      descripcion:
+        "Proveedor oficial de equipos Lenovo: laptops, desktops y servidores empresariales con garantía y soporte especializado para empresas e instituciones.", // Antes decía desc
+    },
+    dell: {
+      img: "src/dell.webp",
+      nombre: "Dell",
+      descripcion:
+        "Soluciones Dell para infraestructura empresarial: servidores PowerEdge, estaciones de trabajo y equipos de cómputo con soporte técnico certificado.",
+    },
+    hp: {
+      img: "src/hp.webp",
+      nombre: "HP",
+      descripcion:
+        "Equipamiento HP para entornos corporativos y educativos: impresoras, laptops, desktops y servidores con respaldo oficial en México.",
+    },
+    ubiquiti: {
+      img: "src/ubiquiti.webp",
+      nombre: "Ubiquiti",
+      descripcion:
+        "Infraestructura de red Ubiquiti: access points, switches y soluciones Wi-Fi de alto rendimiento para campus, oficinas y entornos exigentes.",
+    },
+  };
+
+  window.cambiarLogo = function (clave) {
+    const img =
+      document.getElementById("display-logo") ||
+      document.getElementById("partner-img");
+    const nombreEl = document.getElementById("partner-nombre");
+    const descripEl = document.getElementById("partner-descripcion");
+
+    const socio = datosSocios[clave] || datosSocios["msft"];
+
+    /* Resaltar tag activo — spans normales */
+    document.querySelectorAll(".partners-tags span").forEach((span) => {
+      span.classList.remove("partner-active");
+      if (
+        span.getAttribute("onclick") &&
+        span.getAttribute("onclick").includes(`'${clave}'`)
+      ) {
+        span.classList.add("partner-active");
+      }
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) toggleMenu();
-    });
+    /* Quitar activo del wrapper Apple si lo tenía */
+    const appleWrapper = document.getElementById("tag-apple");
+    if (appleWrapper) appleWrapper.classList.remove("partner-active");
 
-    navMenu?.addEventListener('click', (e) => { e.stopPropagation(); });
+    /* Fade out → cambiar → fade in */
+    if (img) img.style.opacity = "0";
+    if (nombreEl) nombreEl.style.opacity = "0";
+    if (descripEl) descripEl.style.opacity = "0";
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('active')) toggleMenu();
-    });
+    setTimeout(() => {
+      if (img) {
+        img.src = socio.img;
+        img.alt = socio.nombre;
+        img.style.opacity = "1";
+      }
+      if (nombreEl) {
+        nombreEl.textContent = socio.nombre;
+        nombreEl.style.opacity = "1";
+      }
+      if (descripEl) {
+        descripEl.textContent = socio.descripcion;
+        descripEl.style.opacity = "1";
+      }
+    }, 250);
+  };
 
+  /* ── Handler especial para el tag Apple (div wrapper) ── */
+  const appleWrapper = document.getElementById("tag-apple");
+  if (appleWrapper) {
+    appleWrapper.addEventListener("click", function () {
+      const socio = datosSocios["apple"];
+      const img = document.getElementById("display-logo");
+      const nombre = document.getElementById("partner-nombre");
+      const desc = document.getElementById("partner-descripcion");
 
-    /* =========================================
-        3. LÓGICA DE SOCIOS (PARTNERS) — Apple incluido
-       ========================================= */
-    const datosSocios = {
-        'msft': {
-            img: 'src/mtsf.png',
-            nombre: 'Microsoft',
-            descripcion: 'Partner certificado Microsoft. Implementamos soluciones Azure, Office 365, Teams y Dynamics 365 para impulsar la productividad y transformación digital de tu empresa con tecnología en la nube.'
-        },
-        'cisco': {
-            img: 'src/cisco.png',
-            nombre: 'Cisco',
-            descripcion: 'Partner autorizado Cisco. Especialistas en diseño e implementación de redes empresariales, ciberseguridad, colaboración y conectividad de clase mundial para entornos críticos.'
-        },
-        'oracle': {
-            img: 'src/oracle.png',
-            nombre: 'Oracle',
-            descripcion: 'Alianza con Oracle para la implementación y administración de bases de datos, ERP empresarial y soluciones en la nube que optimizan procesos y garantizan alta disponibilidad de datos.'
-        },
-        'sap': {
-            img: 'src/sap.png',
-            nombre: 'SAP',
-            descripcion: 'Partner SAP especializado en la implementación de soluciones ERP, gestión financiera y cadena de suministro que integran y digitalizan todos los procesos clave del negocio.'
-        },
-        'open': {
-            img: 'src/open.png',
-            nombre: 'Open Source',
-            descripcion: 'Implementamos soluciones basadas en tecnologías open source como Linux, Kubernetes, OpenStack y herramientas de desarrollo que reducen costos de licenciamiento sin sacrificar rendimiento.'
-        },
-        'ruijie': {
-            img: 'src/ruijid.webp',
-            nombre: 'Ruijie Network',
-            descripcion: 'Distribuidor oficial Ruijie. Proveemos switches, routers y puntos de acceso Wi-Fi de alto rendimiento para redes empresariales y educativas con gestión centralizada en la nube.'
-        },
-        'huawei': {
-            img: 'src/huwa.png',
-            nombre: 'Huawei',
-            descripcion: 'Partner Huawei para infraestructura de telecomunicaciones, redes 5G, soluciones de almacenamiento y equipos de red empresarial con tecnología de vanguardia a nivel mundial.'
-        },
-        'hikvision': {
-            img: 'src/hiki.webp',
-            nombre: 'Hikvision',
-            descripcion: 'Distribuidor autorizado Hikvision, líder mundial en videovigilancia. Implementamos sistemas de cámaras IP, analítica de video inteligente y control de accesos para proteger tu empresa.'
-        },
-        'apple': {
-            img: 'src/apple.webp',
-            nombre: 'Apple — Distribuidor Oficial',
-            descripcion: 'Somos distribuidores oficiales Apple en México. Equipamos empresas e instituciones con Mac, iPad, iPhone y Apple Business Manager con soporte experto y garantía oficial.'
+      /* Quitar activo de todos */
+      document
+        .querySelectorAll(".partners-tags span")
+        .forEach((s) => s.classList.remove("partner-active"));
+      appleWrapper.classList.remove("partner-active");
+
+      /* Fade out → cambiar → fade in */
+      if (img) img.style.opacity = "0";
+      if (nombre) nombre.style.opacity = "0";
+      if (desc) desc.style.opacity = "0";
+
+      setTimeout(() => {
+        if (img) {
+          img.src = socio.img;
+          img.alt = socio.nombre;
+          img.style.opacity = "1";
         }
-    };
+        if (nombre) {
+          nombre.textContent = socio.nombre;
+          nombre.style.opacity = "1";
+        }
+        if (desc) {
+          desc.textContent = socio.descripcion;
+          desc.style.opacity = "1";
+        }
+      }, 250);
 
-    window.cambiarLogo = function(clave) {
-        const img       = document.getElementById('display-logo') || document.getElementById('partner-img');
-        const nombreEl  = document.getElementById('partner-nombre');
-        const descripEl = document.getElementById('partner-descripcion');
+      appleWrapper.classList.add("partner-active");
+    });
+  }
 
-        const socio = datosSocios[clave] || datosSocios['msft'];
+  /* Transiciones al cargar */
+  const imgEl = document.getElementById("display-logo");
+  const nombreEl = document.getElementById("partner-nombre");
+  const descripEl = document.getElementById("partner-descripcion");
+  if (imgEl) imgEl.style.transition = "opacity 0.25s ease";
+  if (nombreEl) nombreEl.style.transition = "opacity 0.25s ease";
+  if (descripEl) descripEl.style.transition = "opacity 0.25s ease";
 
-        /* Resaltar tag activo — spans normales */
-        document.querySelectorAll('.partners-tags span').forEach(span => {
-            span.classList.remove('partner-active');
-            if (span.getAttribute('onclick') && span.getAttribute('onclick').includes(`'${clave}'`)) {
-                span.classList.add('partner-active');
-            }
-        });
+  /* Marcar Microsoft como activo por defecto */
+  const defaultSpan = document.querySelector(
+    '.partners-tags span[onclick*="msft"]',
+  );
+  if (defaultSpan) defaultSpan.classList.add("partner-active");
 
-        /* Quitar activo del wrapper Apple si lo tenía */
-        const appleWrapper = document.getElementById('tag-apple');
-        if (appleWrapper) appleWrapper.classList.remove('partner-active');
-
-        /* Fade out → cambiar → fade in */
-        if (img)       img.style.opacity       = '0';
-        if (nombreEl)  nombreEl.style.opacity  = '0';
-        if (descripEl) descripEl.style.opacity = '0';
-
-        setTimeout(() => {
-            if (img)       { img.src = socio.img; img.alt = socio.nombre; img.style.opacity = '1'; }
-            if (nombreEl)  { nombreEl.textContent = socio.nombre;      nombreEl.style.opacity  = '1'; }
-            if (descripEl) { descripEl.textContent = socio.descripcion; descripEl.style.opacity = '1'; }
-        }, 250);
-    };
-
-    /* ── Handler especial para el tag Apple (div wrapper) ── */
-    const appleWrapper = document.getElementById('tag-apple');
-    if (appleWrapper) {
-        appleWrapper.addEventListener('click', function () {
-            const socio   = datosSocios['apple'];
-            const img     = document.getElementById('display-logo');
-            const nombre  = document.getElementById('partner-nombre');
-            const desc    = document.getElementById('partner-descripcion');
-
-            /* Quitar activo de todos */
-            document.querySelectorAll('.partners-tags span').forEach(s => s.classList.remove('partner-active'));
-            appleWrapper.classList.remove('partner-active');
-
-            /* Fade out → cambiar → fade in */
-            if (img)    img.style.opacity    = '0';
-            if (nombre) nombre.style.opacity = '0';
-            if (desc)   desc.style.opacity   = '0';
-
-            setTimeout(() => {
-                if (img)    { img.src = socio.img; img.alt = socio.nombre; img.style.opacity = '1'; }
-                if (nombre) { nombre.textContent = socio.nombre;      nombre.style.opacity = '1'; }
-                if (desc)   { desc.textContent   = socio.descripcion; desc.style.opacity   = '1'; }
-            }, 250);
-
-            appleWrapper.classList.add('partner-active');
-        });
-    }
-
-    /* Transiciones al cargar */
-    const imgEl    = document.getElementById('display-logo');
-    const nombreEl = document.getElementById('partner-nombre');
-    const descripEl = document.getElementById('partner-descripcion');
-    if (imgEl)     imgEl.style.transition     = 'opacity 0.25s ease';
-    if (nombreEl)  nombreEl.style.transition  = 'opacity 0.25s ease';
-    if (descripEl) descripEl.style.transition = 'opacity 0.25s ease';
-
-    /* Marcar Microsoft como activo por defecto */
-    const defaultSpan = document.querySelector('.partners-tags span[onclick*="msft"]');
-    if (defaultSpan) defaultSpan.classList.add('partner-active');
-
-
-    /* =========================================
+  /* =========================================
         4. CHAT (Trigger simulado)
        ========================================= */
-    if (chatTrigger) {
-        if ((window.pageYOffset || document.documentElement.scrollTop) > 180) {
-            chatTrigger.classList.add('visible');
-        }
+  if (chatTrigger) {
+    if ((window.pageYOffset || document.documentElement.scrollTop) > 180) {
+      chatTrigger.classList.add("visible");
     }
+  }
 
-    /* =========================================
+  /* =========================================
         5. SCROLL SUAVE PARA ANCLAS
        ========================================= */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (!href || href === '#') return;
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (!href || href === "#") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
+  });
 
-    /* =========================================
+  /* =========================================
         6. AUTO-SCROLL EN CONTENEDORES DESTACADOS
        ========================================= */
-    const featuredContainer = document.querySelector('.featured-scroll-container');
-    const featuredItems     = document.querySelectorAll('.featured-item');
-    const featuredPrev      = document.getElementById('featured-prev');
-    const featuredNext      = document.getElementById('featured-next');
+  const featuredContainer = document.querySelector(
+    ".featured-scroll-container",
+  );
+  const featuredItems = document.querySelectorAll(".featured-item");
+  const featuredPrev = document.getElementById("featured-prev");
+  const featuredNext = document.getElementById("featured-next");
 
-    if (featuredContainer && featuredItems.length > 1) {
-        let currentIndex = 0;
-        const intervalMs = 15000;
-        let syncTimeout;
+  if (featuredContainer && featuredItems.length > 1) {
+    let currentIndex = 0;
+    const intervalMs = 15000;
+    let syncTimeout;
 
-        const goToSlide = (index) => {
-            const clampedIndex = (index + featuredItems.length) % featuredItems.length;
-            currentIndex = clampedIndex;
-            featuredContainer.scrollTo({
-                left: featuredContainer.clientWidth * currentIndex,
-                behavior: 'smooth'
-            });
-        };
-
-        setInterval(() => { goToSlide(currentIndex + 1); }, intervalMs);
-
-        featuredPrev?.addEventListener('click', () => { goToSlide(currentIndex - 1); });
-        featuredNext?.addEventListener('click', () => { goToSlide(currentIndex + 1); });
-
-        featuredContainer.addEventListener('scroll', () => {
-            clearTimeout(syncTimeout);
-            syncTimeout = setTimeout(() => {
-                const rawIndex = featuredContainer.scrollLeft / featuredContainer.clientWidth;
-                currentIndex = Math.round(rawIndex);
-            }, 120);
-        }, { passive: true });
-    }
-
-    /* =========================================
-        7. REVEAL ANIMATION
-       ========================================= */
-    const reveals = document.querySelectorAll(".reveal, .pro-card, .about-container");
-
-    const checkReveal = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        reveals.forEach(el => {
-            const elementTop = el.getBoundingClientRect().top;
-            if (elementTop < triggerBottom) el.classList.add("active");
-        });
+    const goToSlide = (index) => {
+      const clampedIndex =
+        (index + featuredItems.length) % featuredItems.length;
+      currentIndex = clampedIndex;
+      featuredContainer.scrollTo({
+        left: featuredContainer.clientWidth * currentIndex,
+        behavior: "smooth",
+      });
     };
 
-    window.addEventListener("scroll", checkReveal);
-    checkReveal();
+    setInterval(() => {
+      goToSlide(currentIndex + 1);
+    }, intervalMs);
 
-    /* =========================================
+    featuredPrev?.addEventListener("click", () => {
+      goToSlide(currentIndex - 1);
+    });
+    featuredNext?.addEventListener("click", () => {
+      goToSlide(currentIndex + 1);
+    });
+
+    featuredContainer.addEventListener(
+      "scroll",
+      () => {
+        clearTimeout(syncTimeout);
+        syncTimeout = setTimeout(() => {
+          const rawIndex =
+            featuredContainer.scrollLeft / featuredContainer.clientWidth;
+          currentIndex = Math.round(rawIndex);
+        }, 120);
+      },
+      { passive: true },
+    );
+  }
+
+  /* =========================================
+        7. REVEAL ANIMATION
+       ========================================= */
+  const reveals = document.querySelectorAll(
+    ".reveal, .pro-card, .about-container",
+  );
+
+  const checkReveal = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    reveals.forEach((el) => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < triggerBottom) el.classList.add("active");
+    });
+  };
+
+  window.addEventListener("scroll", checkReveal);
+  checkReveal();
+
+  /* =========================================
         8. ARTÍCULOS IDA 360 (Mostrar/Ocultar)
        ========================================= */
-    document.querySelectorAll('.ida-toggle-btn').forEach((button) => {
-        button.addEventListener('click', () => {
-            const targetId    = button.getAttribute('data-target');
-            if (!targetId) return;
-            const moreContent = document.getElementById(targetId);
-            if (!moreContent) return;
+  document.querySelectorAll(".ida-toggle-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-target");
+      if (!targetId) return;
+      const moreContent = document.getElementById(targetId);
+      if (!moreContent) return;
 
-            const isHidden = moreContent.hasAttribute('hidden');
-            if (isHidden) {
-                moreContent.removeAttribute('hidden');
-                button.setAttribute('aria-expanded', 'true');
-                button.textContent = 'Ver menos';
-            } else {
-                moreContent.setAttribute('hidden', '');
-                button.setAttribute('aria-expanded', 'false');
-                button.textContent = 'Ver más';
-            }
-        });
+      const isHidden = moreContent.hasAttribute("hidden");
+      if (isHidden) {
+        moreContent.removeAttribute("hidden");
+        button.setAttribute("aria-expanded", "true");
+        button.textContent = "Ver menos";
+      } else {
+        moreContent.setAttribute("hidden", "");
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "Ver más";
+      }
     });
+  });
 
-    /* =========================================
+  /* =========================================
         9. ENLACES ACTIVOS
        ========================================= */
-    const activePage = window.location.pathname.split("/").pop() || "index.html";
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        const linkHref = link.getAttribute('href').split("#")[0];
-        if (linkHref === activePage) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-
+  const activePage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    const linkHref = link.getAttribute("href").split("#")[0];
+    if (linkHref === activePage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 });
